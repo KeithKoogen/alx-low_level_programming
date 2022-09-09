@@ -3,12 +3,9 @@
 
 
 /**
-
- * main - prints the alphabet in lower case
-
- * Returns: returns 0
-
- */
+* main - prints the alphabet in lower case
+* Returns: returns 0
+*/
 
 
 
@@ -28,9 +25,9 @@ putchar(i + 97);
 
 for (int i = 0; i < 26 ; i++)
 {
-putchar(i+65);
-}   
- 
+putchar(i + 65);
+}
+
 putchar('\n');
 
 
