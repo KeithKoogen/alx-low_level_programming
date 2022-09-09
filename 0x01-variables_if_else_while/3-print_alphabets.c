@@ -11,10 +11,10 @@
 
 int main(void)
 {
+int i;
 
 
-
-for (int i = 0; i < 26 ; i++)
+for (i = 0; i < 26 ; i++)
 
 {
 
@@ -23,7 +23,7 @@ putchar(i + 97);
 }
 
 
-for (int i = 0; i < 26 ; i++)
+for (i = 0; i < 26 ; i++)
 {
 putchar(i + 65);
 }
