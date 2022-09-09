@@ -4,7 +4,7 @@
 
 /**
 * main - prints the alphabet in lower case
-* Returns: returns 0
+* Return: returns 0
 */
 
 
