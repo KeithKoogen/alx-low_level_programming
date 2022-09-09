@@ -15,9 +15,11 @@ if (i == 4 || i == 16)
 
 }
 else
+{
 putchar(i + 97);
-
+}
 }
 putchar('\n');
 
+return (0);
 }
