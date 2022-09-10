@@ -12,23 +12,21 @@ int k;
 
 for (i = 0; i < 10; i++)
 {
-  for (j = i + 1; j < 10; j++)
-    {
+for (j = i + 1; j < 10; j++)
+{
 
-
-      for (k = j + 1; k < 10; k++)
-	{
-
-	  putchar(i + 48);
-	  putchar(j + 48);
-	  putchar(k + 48);
-	  if (i < 7)
-	    {
-	      putchar(44);
-	      putchar(32);
-	    }
-	  }
-     }
+for (k = j + 1; k < 10; k++)
+{
+putchar(i + 48);
+putchar(j + 48);
+putchar(k + 48);
+if (i < 7)
+{
+putchar(44);
+putchar(32);
+}
+}
+}
 }
 
 putchar('\n');
