@@ -29,9 +29,15 @@ putchar(32);
 putchar(k + 48);
 putchar(m + 48);
 
+if (i == 9 && j == 8 && k == 9 && m == 9)
+{
 
+}
+else
+{
 putchar(44);
 putchar(32);
+}
 
 }
 }
