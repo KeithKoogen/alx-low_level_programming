@@ -28,11 +28,11 @@ putchar(j + 48);
 putchar(32);
 putchar(k + 48);
 putchar(m + 48);
-if ((k != 9) && (m != 9))
-{
+
+
 putchar(44);
 putchar(32);
-}
+
 }
 }
 }
