@@ -24,7 +24,7 @@ int main(void)
 	    {
 	        
 	      
-	      do
+	      for (; m < 10 ; m++)
 		{
 
 		  if (i == 9 && j == 9 && k == 9 && m == 10)
@@ -67,9 +67,9 @@ int main(void)
       
 
 		  
-		m++;
+		
 	      }
-	      while(m < 10);
+	      
 	         
 	      m = 0;
 	      
