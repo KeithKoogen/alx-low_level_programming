@@ -9,6 +9,11 @@ void print_times_table(int n)
 {
 int i;
 int j;
+if (n == 0)
+{
+printf("0\n");
+return;
+}
 if (n < 16 && n > 0)
 {
 for (i = 0; i < n + 1; i++)
@@ -26,7 +31,8 @@ else if ((j + 1) * i >= 10)
 {
 printf(",  ");
 }
-else printf(",   ");
+else
+printf(",   ");
 }
 
 else
