@@ -12,7 +12,7 @@ int i;
 
 if (n > 98)
 {
-for (i = n; i > 97; i--)
+for (i = n; i > 98; i--)
 printf("%d, ",i);
 }
 else
@@ -26,6 +26,6 @@ printf("%d, ",i);
 
 }
 }
-printf("98");
-_putchar('\n');
+printf("98\n");
+
 }
