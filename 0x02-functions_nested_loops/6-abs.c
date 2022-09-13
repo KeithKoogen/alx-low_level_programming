@@ -1,0 +1,18 @@
+#include "main.h"
+
+/**
+ * _abs - prints absolute value of an integer
+ * @int: integer value
+ * Return: 0
+ */
+
+int _abs(int)
+{
+if (int < 0)
+{
+int = -int;
+return (int);
+}
+else
+return (int);
+}
