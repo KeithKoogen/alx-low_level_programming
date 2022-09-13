@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ * print_times_table - prints n times table
+ * Return: Void 
+ * @n: integer for times to count from 0
+ */
+
+void print_times_table(int n)
+{
+  int i;
+  int j;
+  for (i = 0; i < n + 1; i++)
+    {
+      for (j = 0; j < n + 1; j++)
+	{
+}
