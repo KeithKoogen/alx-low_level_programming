@@ -21,9 +21,12 @@ void print_times_table(int n)
 		  printf(",   ");
 		}
 	      else if ((j + 1) * i >= 10)
+		{
 		printf(",  ");
+		}
+	      else printf(", "); 
 	    }
-	  else printf(", ");
+      
 	  else
 
 	    {
