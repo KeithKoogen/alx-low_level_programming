@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/** 
+/**
 * main - print fibonacci sequence startig with 1 and 2
 * Return: Void
 */
