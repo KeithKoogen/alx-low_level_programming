@@ -7,22 +7,22 @@
 
 int main(void)
 {
-unsigned long float i;
-unsigned long float j;
-unsigned long float k;
-unsigned long float tmp;
+unsigned float i;
+unsigned float j;
+unsigned float k;
+unsigned float tmp;
 
 j = 1;
 k = 2;
-printf("%.fl, ", j);
-printf("%.fl, ", k);
+printf("%.ld, ", j);
+printf("%.ld, ", k);
 
 for (i = 0; i < 98; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%.fl", k);
+printf("%.ld", k);
 if (i == 95)
 {
 break;
