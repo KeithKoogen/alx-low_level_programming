@@ -15,7 +15,7 @@ long int sum;
 j = 1;
 k = 2;
 
-while (k < 40000)
+while (k < 4000)
 {
 tmp = k + j;
 j = k;
