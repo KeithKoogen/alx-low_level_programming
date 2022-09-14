@@ -13,7 +13,7 @@ int tmp;
   
 j = 1;
 k = 2;
-printf("%d, ", i);
+printf("%d, ", j);
 printf("%d, ", k);
   
 for (i = 0; i < 50; i++)
@@ -29,4 +29,5 @@ break;
 printf(", ");
 }
   
+return (0);
 }
