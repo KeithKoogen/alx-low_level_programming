@@ -31,7 +31,7 @@ if (a == b || a == c)
 }
 if (b == c)
 {
-largest == b;
+largest = b;
 }
 
 return (largest);
