@@ -25,9 +25,9 @@ tmp = k + j;
 j = k;
 k = tmp;
 
-if (k % 2 == 0)
+if (j % 2 == 0)
 {
-sum = sum + k;
+sum = sum + j;
 }
 }
 printf("%ld\n", sum);
