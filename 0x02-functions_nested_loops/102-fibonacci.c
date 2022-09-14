@@ -13,15 +13,15 @@ long int tmp;
 
 j = 1;
 k = 2;
-printf("%d, ", j);
-printf("%d, ", k);
+printf("%ld, ", j);
+printf("%ld, ", k);
   
 for (i = 0; i < 50; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%d", k);
+printf("%ld", k);
 if (i == 49)
 {
 break;
