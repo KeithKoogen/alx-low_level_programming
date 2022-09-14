@@ -26,7 +26,7 @@ if (i == 49)
 {
 break;
 }
-printf(, );
+printf(", ");
   
   
 }
