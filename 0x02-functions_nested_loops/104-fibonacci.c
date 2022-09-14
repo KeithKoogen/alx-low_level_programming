@@ -19,9 +19,9 @@ printf("%.f, ", k);
 
 for (i = 0; i < 98; i++)
 {
-tmp = k + j;
+tmp = j;
 j = k;
-k = tmp;
+k = k + tmp;
 printf("%.f", k);
 if (i == 95)
 {
