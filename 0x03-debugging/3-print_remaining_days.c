@@ -20,7 +20,7 @@ day++;
 }
 else
 {
-day = day + 0;
+day = day - 1;
 }
 printf("Day of the year: %d\n", day);
 printf("Remaining days: %d\n", 366 - day);
