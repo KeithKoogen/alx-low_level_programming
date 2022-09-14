@@ -24,7 +24,7 @@ k = tmp;
 printf("%d", k);
 if (i == 49) 
 {
-break
+break;
 }
 printf(, );
   
