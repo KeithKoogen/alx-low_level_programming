@@ -7,22 +7,22 @@
 
 int main(void)
 {
-long double i;
-long double j;
-long double k;
-long double tmp;
+unsigned long i;
+unsigned long j;
+unsigned long k;
+unsigned long tmp;
 
 j = 1;
 k = 2;
-printf("%.0Lf, ", j);
-printf("%.0Lf, ", k);
+printf("%i, ", j);
+printf("%i, ", k);
 
 for (i = 0; i < 98; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%.0Lf", k);
+printf("%i", k);
 if (i == 95)
 {
 break;
