@@ -25,5 +25,14 @@ else
 largest = c;
 }
 
+if (a == b || a == c)
+{
+  largest = a;
+}
+if (b == c)
+{
+largest == b;
+}
+
 return (largest);
 }
