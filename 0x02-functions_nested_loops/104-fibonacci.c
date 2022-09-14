@@ -14,15 +14,15 @@ long double tmp;
 
 j = 1;
 k = 2;
-printf("%ld, ", j);
-printf("%ld, ", k);
+printf("%lf, ", j);
+printf("%lf, ", k);
 
 for (i = 0; i < 98; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%ld", k);
+printf("%lf", k);
 if (i == 95)
 {
 break;
