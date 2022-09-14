@@ -14,15 +14,15 @@ float tmp;
 
 j = 1;
 k = 2;
-printf("%.ld, ", j);
-printf("%.ld, ", k);
+printf("%.f, ", j);
+printf("%.f, ", k);
 
 for (i = 0; i < 98; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%.ld", k);
+printf("%.f", k);
 if (i == 95)
 {
 break;
