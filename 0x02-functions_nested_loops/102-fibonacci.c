@@ -6,11 +6,11 @@
 
 int main(void)
 {
-int i;
-int j;
-int k;
-int tmp;
-  
+long int i;
+long int j;
+long int k;
+long int tmp;
+
 j = 1;
 k = 2;
 printf("%d, ", j);
@@ -22,7 +22,7 @@ tmp = k + j;
 j = k;
 k = tmp;
 printf("%d", k);
-if (i == 49) 
+if (i == 49)
 {
 break;
 }
