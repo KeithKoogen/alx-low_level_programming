@@ -27,7 +27,7 @@ largest = c;
 
 if (a == b || a == c)
 {
-  largest = a;
+largest = a;
 }
 if (b == c)
 {
