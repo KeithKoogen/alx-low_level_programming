@@ -7,10 +7,10 @@
 
 int main(void)
 {
-long int i;
-long int j;
-long int k;
-long int tmp;
+unsigned long i;
+unsigned long j;
+unsigned long k;
+unsigned long tmp;
 
 j = 1;
 k = 2;
@@ -23,7 +23,7 @@ tmp = k + j;
 j = k;
 k = tmp;
 printf("%ld", k);
-if (i == 97)
+if (i == 95)
 {
 break;
 }
