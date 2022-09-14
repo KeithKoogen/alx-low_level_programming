@@ -14,15 +14,15 @@ unsigned long tmp;
 
 j = 1;
 k = 2;
-printf("%i, ", j);
-printf("%i, ", k);
+printf("%li, ", j);
+printf("%li, ", k);
 
 for (i = 0; i < 98; i++)
 {
 tmp = k + j;
 j = k;
 k = tmp;
-printf("%i", k);
+printf("%li", k);
 if (i == 95)
 {
 break;
