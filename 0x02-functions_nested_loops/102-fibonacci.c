@@ -15,7 +15,7 @@ j = 1;
 k = 2;
 printf("%ld, ", j);
 printf("%ld, ", k);
-  
+
 for (i = 0; i < 50; i++)
 {
 tmp = k + j;
@@ -28,6 +28,6 @@ break;
 }
 printf(", ");
 }
-  
+printf("\n');
 return (0);
 }
