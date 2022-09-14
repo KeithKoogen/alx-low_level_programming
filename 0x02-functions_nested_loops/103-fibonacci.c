@@ -19,7 +19,7 @@ while (j < 400)
 {
 if (j > 400)
 {
-break
+break;
 }
 tmp = k + j;
 j = k;
