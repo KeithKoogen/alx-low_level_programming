@@ -17,7 +17,10 @@ k = 2;
 
 while (j < 400)
 {
-
+if (j > 400)
+{
+break
+}
 tmp = k + j;
 j = k;
 k = tmp;
