@@ -7,10 +7,10 @@
 
 int main(void)
 {
-unsigned long i;
-unsigned long j;
-unsigned long k;
-unsigned long tmp;
+long i;
+long j;
+long k;
+long tmp;
 
 j = 1;
 k = 2;
