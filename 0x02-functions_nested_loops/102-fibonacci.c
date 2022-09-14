@@ -22,7 +22,7 @@ tmp = k + j;
 j = k;
 k = tmp;
 printf("%ld", k);
-if (i == 49)
+if (i == 47)
 {
 break;
 }
