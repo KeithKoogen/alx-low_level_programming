@@ -15,8 +15,12 @@ long int sum;
 j = 1;
 k = 2;
 
-while (k < 4000)
+while (k < 4000000)
 {
+if (k > 4000000)
+{
+break;
+}
 tmp = k + j;
 j = k;
 k = tmp;
