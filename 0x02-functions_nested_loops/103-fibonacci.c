@@ -14,8 +14,6 @@ long int sum;
 
 j = 1;
 k = 2;
-printf("%ld, ", j);
-printf("%ld, ", k);
 
 while (k < 4000000)
 {
