@@ -7,10 +7,10 @@
 
 int main(void)
 {
-unsigned float i;
-unsigned float j;
-unsigned float k;
-unsigned float tmp;
+float i;
+float j;
+float k;
+float tmp;
 
 j = 1;
 k = 2;
