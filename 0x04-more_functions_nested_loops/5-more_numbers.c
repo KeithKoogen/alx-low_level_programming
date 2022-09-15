@@ -17,7 +17,8 @@ _putchar(i + 48);
 }
 else
 {
-_putchar(i + 48 - 9);
+_putchar('1');
+_putchar(i + 48 - 10);
 }
 }
 _putchar('\n');
