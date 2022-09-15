@@ -33,5 +33,6 @@ int main(void)
       prime = i;
     }
   }
-  printf("%d\n", prime);
+  printf("%ld\n", prime);
+  return (0);
 }
