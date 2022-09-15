@@ -21,11 +21,11 @@ for (k = 0; k < i + 1; k++)
 {
 printf("#");
 }
-printf("\n"); 
+printf("\n");
 }
 }
 else
 {
-printf("\n"); 
+printf("\n");
 }
 }
