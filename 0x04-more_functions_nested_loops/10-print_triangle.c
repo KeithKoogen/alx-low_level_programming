@@ -18,7 +18,7 @@ for (j = 0; j < size - i + 1; j++)
 {
 printf(" ");
     }
-    for (k = 0; k < i + 1; k++)
+    for (k = 0; k < i; k++)
     {
       printf("#");
     }
