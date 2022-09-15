@@ -13,11 +13,11 @@ if (((i + 1) % 3 == 0) && ((i + 1) % 3 == 0))
 {
 printf("FizzBuzz ");
 }
-else if ((i + 1) % 3 == 0))
+else if ((i + 1) % 3 == 0)
 {
 printf("Fizz ");
 }
-else if ((i + 1) % 5 == 0))
+else if ((i + 1) % 5 == 0)
 {
 printf("Buzz ");
 }
