@@ -19,7 +19,7 @@ int main(void)
     count = 0;
     if (n % i == 0) 
     {
-      for (j = i; i > 1; j--) 
+      for (j = i; j > 2; j--) 
       {
         if (i % j == 0) 
         {
