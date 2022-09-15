@@ -4,9 +4,9 @@
 * @c: a character int value
 * Return: Integer 1 is uppercase else 0
 */
-int _isupper(int c);
+int _isupper(int c)
 {
-if ( (c > 64) && (c < 91))
+if ((c > 64) && (c < 91))
 {
 return (1);
 }
