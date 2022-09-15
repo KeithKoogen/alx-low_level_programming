@@ -17,7 +17,7 @@ _putchar(i + 48);
 }
 else
 {
-_putchar('1');
+_putchar(49);
 _putchar(i + 48 - 10);
 }
 }
