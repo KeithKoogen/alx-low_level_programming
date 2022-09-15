@@ -3,7 +3,6 @@
 * main - The Fizz buzz test
 * Return: Void
 */
-
 int main(void)
 {
 int i;
@@ -26,5 +25,6 @@ else
 printf("%d", i + 1);
 }
 }
+printf("\n");
 return (0);
 }
