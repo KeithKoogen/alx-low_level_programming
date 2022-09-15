@@ -22,7 +22,7 @@ printf("Buzz ");
 }
 else
 {
-printf("%d", i + 1);
+printf("%d ", i + 1);
 }
 }
 printf("\n");
