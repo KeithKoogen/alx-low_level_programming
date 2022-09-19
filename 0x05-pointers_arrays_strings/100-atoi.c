@@ -7,9 +7,10 @@
 
 int _atoi(char *s)
 {
-int j, i, k, count, m, x;
-long long integer;
+int j, i, k, count, m, x, v;
+unsigned int integer;
 integer = 0;
+v = 0;
 i = 0;
 k = 1;
 m = 1;
@@ -39,10 +40,10 @@ k = k / 10;
 integer = integer + (k * (s[j] - 48));
 j++;
 }
-integer = integer *m;
-return (integer);
+v = integer *m;
+return (v);
 }
 i++;
 }
-return (integer);
+return (v);
 }
