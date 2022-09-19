@@ -35,7 +35,7 @@ while (s[j] > 47 && s[j] < 58)
 {
 k = k / 10;
 r = (s[j] - 48) * k;
-integerx = integerx + r);
+integerx = integerx + r;
 j++;
 }
 return (integerx *m);
