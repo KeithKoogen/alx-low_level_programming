@@ -11,7 +11,8 @@ int j, i, k, count, m, x;
 int integer;
 integer = 0;
 i = 0;
-k, m = 1;
+k = 1;
+m = 1;
 count = 0;
 while (s[i] != '\0')
 {
