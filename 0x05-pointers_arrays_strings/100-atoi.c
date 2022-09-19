@@ -31,7 +31,7 @@ k = 1;
 j = i;
 while(s[j] > 47 && s[j] < 58)
 {
-integer = integer + (s[j] * k);
+integer = integer + ((s[j] - 48) * k);
 j++;
 k = k * 10;
 }
