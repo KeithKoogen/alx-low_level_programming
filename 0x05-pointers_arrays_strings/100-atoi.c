@@ -46,9 +46,10 @@ j = i;
   
 while(s[j] > 47 && s[j] < 58)
 {
+k = k / 10;
 integer = integer + (k * (s[j] - 48));
 j++;
-k = k / 10;
+
 
 }
 
