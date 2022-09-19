@@ -17,7 +17,7 @@ integer = 0;
 i = 0;
 k = 1;
 m = 0;
-count = 1;
+count = 0;
   
 while (s[i] != '\0')
 {
@@ -33,22 +33,25 @@ else
 m = 1;
 }
 j = i;
+  
 while(s[j] > 47 && s[j] < 58)
 {
-  if (count >= 1 && s[j] == 48)
-{
-integer = integer + (integer * 9);
-} 
-else
-{
-integer = integer + ((s[j] - 48) * k);
-}
-
 
 j++;
 count++;
 k = k * 10;
 }
+
+j = i;
+  
+while(s[j] > 47 && s[j] < 58)
+{
+integer = integer + (k * (s[j] - 48))
+j++;
+k = k / 10;
+
+}
+
 
 return (integer * m); 
 
