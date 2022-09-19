@@ -11,7 +11,7 @@ int j;
 int i;
 int k;
 int count;
-unsigned int integer;
+int integer;
 int m;
 integer = 0;
 i = 0;
@@ -24,7 +24,7 @@ while (s[i] != '\0')
 if (s[i] > 47 && s[i] <= 58)
 {
 
-if (s[i - 1] == 45)
+if (s[i - 1] == '-')
 {
 m = -1;
 }
