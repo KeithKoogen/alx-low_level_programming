@@ -8,13 +8,12 @@
 int _atoi(char *s)
 {
 int j, i, k, count, m, x, v;
-unsigned int integer;
-integer = 0;
+unsigned int integerx;
+integerx = 0;
 v = 0;
 i = 0;
 k = 1;
 m = 1;
-count = 0;
 while (s[i] != '\0')
 {
 if (s[i] > 47 && s[i] < 58)
@@ -30,17 +29,16 @@ j = i;
 while (s[j] > 47 && s[j] < 58)
 {
 j++;
-count++;
 k = k * 10;
 }
 j = i;
 while (s[j] > 47 && s[j] < 58)
 {
 k = k / 10;
-integer = integer + (k * (s[j] - 48));
+integerx = integerx + (k * (s[j] - 48));
 j++;
 }
-v = integer *m;
+v = integerx *m;
 return (v);
 }
 i++;
