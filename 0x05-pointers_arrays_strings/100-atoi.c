@@ -39,9 +39,10 @@ k = k / 10;
 integer = integer + (k * (s[j] - 48));
 j++;
 }
-return (integer *m);
+integer = integer *m;
+return (integer);
 }
 i++;
 }
-return (integer *m);
+return (integer);
 }
