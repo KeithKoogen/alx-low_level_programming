@@ -20,11 +20,11 @@ i++;
 if (i % 2 == 0)
 {
 for (j = 0; j < i / 2; j++)
-_putchar(j + (i / 2));
+_putchar(str[j + (i / 2)]);
 }
 else
 {
 for (j = 0; j < (i - 1) / 2; j++)
-_putchar(j + (i / 2));
+_putchar(str[j + (i / 2)]);
 }
 }
