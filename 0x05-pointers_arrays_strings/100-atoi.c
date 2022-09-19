@@ -40,6 +40,8 @@ integer = integer + (k * (s[j] - 48));
 j++;
 }
 integer = integer *m;
+if (integer > INT_MAX)
+  integer = INT_MAX;
 return (integer);
 }
 i++;
