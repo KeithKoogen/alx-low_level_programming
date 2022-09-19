@@ -10,10 +10,12 @@ int _atoi(char *s)
 int j;
 int i;
 int k;
+int count;
 int integer;
 integer = 0;
 i = 0;
 k = 0;
+count = 1;
   
 while (s[i] != '\0')
 {
@@ -31,12 +33,13 @@ k = 1;
 j = i;
 while(s[j] > 47 && s[j] < 58)
 {
-if (j > 1 && s[j] == 48)
+if (count > 1 && s[j] == 48)
 {
 s[j] = 49; 
 }
 integer = integer + ((s[j] - 48) * k);
 j++;
+count++;
 k = k * 10;
 }
 
