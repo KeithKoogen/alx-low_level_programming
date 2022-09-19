@@ -35,7 +35,7 @@ while(s[j] > 47 && s[j] < 58)
 {
   if (count >= 1 && s[j] == 48)
 {
-s[j] = 49; 
+s[j] = '1'; 
 }
 
 integer = integer + ((s[j] - 48) * k);
