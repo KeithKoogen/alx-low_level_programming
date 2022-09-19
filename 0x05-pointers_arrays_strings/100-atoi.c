@@ -7,7 +7,7 @@
 
 int _atoi(char *s)
 {
-int j, i, k, count, m, x, v;
+int j, i, k, m, x, v;
 unsigned int integerx;
 integerx = 0;
 v = 0;
