@@ -7,10 +7,9 @@
 
 int _atoi(char *s)
 {
-int j, i, k, m, x, v;
+int j, i, k, m, x, r;
 unsigned int integerx;
 integerx = 0;
-v = 0;
 i = 0;
 k = 1;
 m = 1;
@@ -35,13 +34,13 @@ j = i;
 while (s[j] > 47 && s[j] < 58)
 {
 k = k / 10;
-integerx = integerx + (k * (s[j] - 48));
+r = (s[j] - 48) * k;
+integerx = integerx + r);
 j++;
 }
-v = integerx *m;
-return (v);
+return (integerx *m);
 }
 i++;
 }
-return (v);
+return (integerx);
 }
