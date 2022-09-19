@@ -22,8 +22,8 @@ i++;
 for (j = 0; j < (i / 2); j++)
 {
 tmp = s[j];
-s[j] = s[i];
-s[i] = tmp;
+s[j] = s[i - 1];
+s[i - 1] = tmp;
 i--;
 }
 
