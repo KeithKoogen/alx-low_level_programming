@@ -12,9 +12,11 @@ int i;
 int k;
 int count;
 int integer;
+int m;
 integer = 0;
 i = 0;
-k = 0;
+k = 1;
+m = 0;
 count = 1;
   
 while (s[i] != '\0')
@@ -24,11 +26,11 @@ if (s[i] > 47 && s[i] <= 58)
 
 if (s[i - 1] == 45)
 {
-k = -1;
+m = -1;
 }
 else
 {
-k = 1;
+m = 1;
 }
 j = i;
 while(s[j] > 47 && s[j] < 58)
@@ -48,12 +50,12 @@ count++;
 k = k * 10;
 }
 
-return (integer); 
+return (integer * m); 
 
 
 }
 i++;
 }
 
-return (integer);
+return (integer * m);
 }
