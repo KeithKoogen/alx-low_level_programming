@@ -35,10 +35,14 @@ while(s[j] > 47 && s[j] < 58)
 {
   if (count >= 1 && s[j] == 48)
 {
-count++; 
+integer = integer + ((s[j] - 47) * k);
+} 
+else
+{
+integer = integer + ((s[j] - 48) * k);
 }
 
-integer = integer + ((s[j] - 48) * k);
+
 j++;
 count++;
 k = k * 10;
