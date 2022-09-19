@@ -26,22 +26,22 @@ m = m * -1;
 }
 }
 j = i;
-while(s[j] > 47 && s[j] < 58)
+while (s[j] > 47 && s[j] < 58)
 {
 j++;
 count++;
 k = k * 10;
 }
 j = i;
-while(s[j] > 47 && s[j] < 58)
+while (s[j] > 47 && s[j] < 58)
 {
 k = k / 10;
 integer = integer + (k * (s[j] - 48));
 j++;
 }
-return (integer * m);
+return (integer *m);
 }
 i++;
 }
-return (integer * m);
+return (integer *m);
 }
