@@ -13,10 +13,11 @@ int k;
 int count;
 int integer;
 int m;
+int x;
 integer = 0;
 i = 0;
 k = 1;
-m = 0;
+m = 1;
 count = 0;
   
 while (s[i] != '\0')
@@ -24,14 +25,15 @@ while (s[i] != '\0')
 if (s[i] > 47 && s[i] <= 58)
 {
 
-if (s[i - 1] == '-')
+for (x = 0; x < i; x++)
 {
-m = -1;
+  if (s[x] == '-')
+  {
+    m = m * -1;
+   }
+ 
 }
-else
-{
-m = 1;
-}
+
 j = i;
   
 while(s[j] > 47 && s[j] < 58)
