@@ -1,5 +1,4 @@
 #include "main.h"
-#include "limits.h"
 /**
 * _atoi - converts numbersin a string
 * @s: a string
@@ -17,7 +16,7 @@ m = 1;
 count = 0;
 while (s[i] != '\0')
 {
-if (s[i] > 47 && s[i] <= 58)
+if (s[i] > 47 && s[i] < 58)
 {
 for (x = 0; x < i; x++)
 {
@@ -26,6 +25,7 @@ if (s[x] == '-')
 m = m * -1;
 }
 }
+
 j = i;
 while (s[j] > 47 && s[j] < 58)
 {
@@ -33,6 +33,7 @@ j++;
 count++;
 k = k * 10;
 }
+
 j = i;
 while (s[j] > 47 && s[j] < 58)
 {
@@ -41,8 +42,7 @@ integer = integer + (k * (s[j] - 48));
 j++;
 }
 integer = integer *m;
-if (integer > INT_MAX)
-  integer = INT_MAX;
+
 return (integer);
 }
 i++;
