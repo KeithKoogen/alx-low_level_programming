@@ -33,7 +33,7 @@ k = 1;
 j = i;
 while(s[j] > 47 && s[j] < 58)
 {
-if (count > 1 && s[j] == 48)
+if (count >= 1 && s[j] == 48)
 {
 s[j] = 49; 
 }
