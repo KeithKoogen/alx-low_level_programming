@@ -27,7 +27,7 @@ dest[length++] = src[i];
 }
 else
 {
-dest[length++] = '\0';
+dest[length++] = NULL;
 }
 }
 return (dest);
