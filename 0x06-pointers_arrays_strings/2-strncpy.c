@@ -16,19 +16,19 @@ length = 0;
 
 while (src[length] != '\0')
 {
-	++length;
+++length;
 }
 
 for (i = 0; i < n; i++)
 {
-	if (i < length)
-	{
-		dest[length + i] = src[i];
-	}
-	else
-	{
-		dest[length + i] = '\0';
-	}
+if (i < length)
+{
+dest[length + i] = src[i];
 }
-	return (dest);
+else
+{
+dest[length + i] = '\0';
+}
+}
+return (dest);
 }
