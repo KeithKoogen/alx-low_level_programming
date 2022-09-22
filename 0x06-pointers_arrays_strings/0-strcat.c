@@ -21,7 +21,7 @@ while (src[len_src] != '\0')
 len_src++;
 
 for (i = 0; i < len_src; i++)
-dest[len_dest + i - 1] = src[i];
+dest[len_dest++] = src[i];
 
 return (dest);
 }
