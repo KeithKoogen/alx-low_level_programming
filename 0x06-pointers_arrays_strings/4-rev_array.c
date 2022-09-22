@@ -16,7 +16,7 @@ i = n;
 while (i > -1)
 {
 tmp[n - i] = a[i];
-i--;
+--i;
 }
 
 for (i = 0; i < n; i++)
