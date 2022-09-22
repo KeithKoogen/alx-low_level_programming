@@ -14,13 +14,10 @@ int len_dest;
 int i;
 len_src = sizeof(src) / sizeof(char);
 len_dest = sizeof(dest) / sizeof(char);
-char joined[len_src + len_dest - 1];
 
-for (i = 0; i < len_dest - 1; i++)
-joined[i] = dest[i];
 
-for (i = len_dest - 1; i < len_src + len_dest - 1; i++);
-joined[i] = len_src[i - len_dest - 1];
+for (i = 0; i < len_src - 1; i++)
+dest[len_dest + i - 1] = src[i];
 
-return (joined);
+return (dest);
 }
