@@ -20,14 +20,10 @@ while (src[length] != '\0')
 ++length;
 }
 
-while (dest[dest_length] != '\0')
-{
-++dest_length;
-}
 
 for (i = 0; i < n; i++)
 {
-if (i <= length)
+if (i < length)
 {
 dest[dest_length++] = src[i];
 }
