@@ -23,6 +23,7 @@ str[i] = cypher[j];
 break;
 }
 }
+i++;
 }
 return (str);
 }
