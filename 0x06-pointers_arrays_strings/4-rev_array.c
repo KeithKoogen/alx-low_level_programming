@@ -19,7 +19,7 @@ if (n > 0)
 {
 while (i > -1)
 {
-tmp[n - i] = a[i];
+tmp[n - i] = a[i - 1];
 --i;
 }
 
