@@ -11,6 +11,7 @@ char *rot13(char *str)
 	int j;
 	char alphabet[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char cypher[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	i = 0;
 	
 	while (str[i] != '\0')
 	{
