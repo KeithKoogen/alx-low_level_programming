@@ -21,6 +21,6 @@ while (dest[length] != '\0')
 for (i = 0; i < n; i++)
 dest[length++] = src[i];
 
-dest[length + 1] = '\0';
+
 return (dest);
 }
