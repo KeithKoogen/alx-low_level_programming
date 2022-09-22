@@ -31,7 +31,7 @@ void print_number(int n)
 		times++;
 	}
 	
-	for (i = 0; i < times + 1)
+	for (i = 0; i < times; i++)
 	{
 	_putchar((num / j) + 48);
 	j = j / 10;
