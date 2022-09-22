@@ -13,7 +13,7 @@ void print_number(int n)
 	int j;
 	int times;
 	times = 1;
-	j =1;
+	j = 1;
 	i = 0;
 	if (n < 0)
 	{
@@ -33,9 +33,8 @@ void print_number(int n)
 	
 	for (i = 0; i < times + 1)
 	{
-	
-	_putchar((num / j) + 48)
-		j = j / 10;
+	_putchar((num / j) + 48);
+	j = j / 10;
 		}
 }
 	
