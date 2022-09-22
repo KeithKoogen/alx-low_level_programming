@@ -20,6 +20,7 @@ for (j = 0; alphabet[j] != '\0'; j++)
 if (alphabet[j] == str[i])
 {
 str[i] = cypher[j];
+break;
 }
 }
 }
