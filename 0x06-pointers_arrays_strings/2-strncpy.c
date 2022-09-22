@@ -23,11 +23,11 @@ for (i = 0; i < n; i++)
 {
 if (i < length)
 {
-dest[length + i] = src[i];
+dest[length++] = src[i];
 }
 else
 {
-dest[length + i] = '\0';
+dest[length++] = '\0';
 }
 }
 return (dest);
