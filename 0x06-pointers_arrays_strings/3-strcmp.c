@@ -19,14 +19,14 @@ i = 0;
 while (s1[i] != '\0')
 {
 	s1_value = s1_value + s1[i];
-	i++;
+	++i;
 }
 
 i = 0;
 while (s2[i] != '\0')
 {
 	s2_value = s1_value + s1[i];
-	i++;
+	++i;
 }
 
 return (s2_value - s1_value);
