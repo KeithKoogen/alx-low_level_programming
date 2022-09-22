@@ -10,24 +10,25 @@
 int _strcmp(char *s1, char *s2)
 {
 int i;
-int s1_value;
-int s2_value;
-
-s1_value = 0;
-s2_value = 0;
+int value;
+value = 0;
 i = 0;
 while (s1[i] != '\0')
 {
-	s1_value = s1_value + s1[i];
-	++i;
-}
-
-i = 0;
-while (s2[i] != '\0')
+if[s1[i] == s2[i])
 {
-	s2_value = s1_value + s1[i];
-	++i;
+value = 0;
+i++;
+}
+else
+{
+value = s1[i] - s2[i];
+break;
+}
+   
 }
 
-return (s1_value - s2_value);
+
+
+return (value);
 }
