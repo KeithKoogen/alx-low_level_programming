@@ -26,10 +26,6 @@ else
 value = s1[i] - s2[i];
 break;
 }
-   
 }
-
-
-
 return (value);
 }
