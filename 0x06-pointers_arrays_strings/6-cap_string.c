@@ -15,7 +15,7 @@ if (str[0] > 96 && str[0] < 123)
 	
 while (str[i] != '\0')
 {
-	if ((str[i] > 31 && str[i] < 48) || (str[i] > 57 && str[i] < 65) || (str[i] > 122 && str[i] < 127) || (str[i] == '\n'))
+	if ((str[i] > 31 && str[i] < 48) || (str[i] > 57 && str[i] < 65) || (str[i] > 122 && str[i] < 127) || (str[i] == '\n') || (str[i] == '\t'))
 			{
 				if ((str[i + 1] > 96) && (str[i + 1] < 123))
 				{
