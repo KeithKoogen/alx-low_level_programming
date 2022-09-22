@@ -17,7 +17,7 @@ str[0] = str[0] - 32;
 
 while (str[i] != '\0')
 {
-if ((str[i] > 31 && str[i] < 48) || (str[i] > 57 && str[i] < 65) || (str[i] > 122 && str[i] < 127) || (str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v') || (str[i] == ' '))
+if (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == ' ' || str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
 {
 if ((str[i + 1] > 96) && (str[i + 1] < 123))
 {
