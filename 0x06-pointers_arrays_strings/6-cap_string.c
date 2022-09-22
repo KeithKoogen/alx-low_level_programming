@@ -22,6 +22,7 @@ while (str[i] != '\0')
 					str[i + 1] = str[i + 1] - 32;
 				}
 			}
+	++i;
 }
 			return (str);
 	
