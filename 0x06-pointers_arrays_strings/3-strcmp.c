@@ -29,5 +29,5 @@ while (s2[i] != '\0')
 	i++;
 }
 
-return (s1_value - s2_value);
+return (s2_value - s1_value);
 }
