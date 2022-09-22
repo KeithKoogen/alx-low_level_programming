@@ -24,7 +24,7 @@ while (str[i] != '\0')
 	{
 		if (str[i] == letter[j][0] || str[i] == letter[j][1])
 		{
-			str[i] = letter[j][2]
+			str[i] = letter[j][2];
 		}
 	}
 	i++;
