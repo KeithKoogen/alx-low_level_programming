@@ -12,13 +12,15 @@ char *_strcat(char *dest, char *src)
 int len_src;
 int len_dest;
 int i;
-len_src = sizeof(src) / sizeof(char);
+len_src = 0;
 len_dest = 0;
 while (dest[len_dest] != '\0')
 len_dest++;
 
+while (src[len_src] != '\0')
+len_src++;
 
-for (i = 0; i < len_src - 1; i++)
+for (i = 0; i < len_src; i++)
 dest[len_dest + i - 1] = src[i];
 
 return (dest);
