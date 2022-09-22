@@ -19,7 +19,7 @@ while (str[i] != '\0')
 {
 if (
 str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
-|| str[i] == ' ' || str[i] == ',' || str[i] == ';' 
+|| str[i] == ' ' || str[i] == ',' || str[i] == ';'
 || str[i] == '.' || str[i] == '!' || str[i] == '?'
 || str[i] == '"' || str[i] == '(' || str[i] == ')'
 || str[i] == '{' || str[i] == '}'
