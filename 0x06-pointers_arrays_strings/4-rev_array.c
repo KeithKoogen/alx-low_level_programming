@@ -9,9 +9,10 @@
 
 void reverse_array(int *a, int n)
 {
-int *tmp;
+int *tmp = malloc(sizeof(int) * n);
 int i;
 i = n - 1;
+
 
 if (n > 0)
 {
@@ -26,4 +27,5 @@ for (i = 0; i < n; i++)
 a[i] = tmp[i];
 }
 }
+free(tmp);
 }
