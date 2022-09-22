@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 {
 int *tmp = malloc(sizeof(int) * n);
 int i;
-i = n - 1;
+i = n;
 
 
 if (n > 0)
