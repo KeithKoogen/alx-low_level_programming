@@ -17,8 +17,11 @@ str[0] = str[0] - 32;
 
 while (str[i] != '\0')
 {
-if (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == ' ' || str[i] == ',' || str[i] == ';' || str[i] == '.' 
-    || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+if (str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+|| str[i] == ' ' || str[i] == ',' || str[i] == ';' 
+|| str[i] == '.' || str[i] == '!' || str[i] == '?'
+|| str[i] == '"' || str[i] == '(' || str[i] == ')'
+|| str[i] == '{' || str[i] == '}')
 {
 if ((str[i + 1] > 96) && (str[i + 1] < 123))
 {
