@@ -27,7 +27,7 @@ while (dest[dest_length] != '\0')
 
 for (i = 0; i < n; i++)
 {
-if (i < length)
+if (i <= length)
 {
 dest[dest_length++] = src[i];
 }
