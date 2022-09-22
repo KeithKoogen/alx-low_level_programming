@@ -21,13 +21,13 @@ while (src[length] != '\0')
 
 for (i = 0; i < n; i++)
 {
-if (i < length)
+if (i <= length)
 {
 dest[length++] = src[i];
 }
 else
 {
-dest[length++] = NUL;
+dest[length++] = '\0';
 }
 }
 return (dest);
