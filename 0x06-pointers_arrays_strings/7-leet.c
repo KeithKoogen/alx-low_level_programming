@@ -27,6 +27,7 @@ while (str[i] != '\0')
 			str[i] = letter[j][2]
 		}
 	}
+	i++;
 }
 return (str);
 }
