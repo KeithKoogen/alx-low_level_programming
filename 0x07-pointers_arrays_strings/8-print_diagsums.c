@@ -16,6 +16,7 @@ void print_diagsums(int *a, int size)
 	int total, total_opposite;
 
 	total = 0;
+	total_opposite = 0;
 	j = 0;
 	for (i = 0; i < size; i++)
 	{
