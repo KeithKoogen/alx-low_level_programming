@@ -28,7 +28,7 @@ void print_diagsums(int *a, int size)
 	for (i = size; i > size; i--)
 	{
 
-		total_opposite = total_opposite + a[(i*size)+j];
+		total_opposite = total_opposite + a[(i*size)-j];
 		++j;
 	}
 
