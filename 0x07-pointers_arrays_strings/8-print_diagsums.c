@@ -24,12 +24,12 @@ void print_diagsums(int *a, int size)
 		++j;
 	}
 
-	j = 0;
-	for (i = size; i > -1; i--)
+	
+	for (i = 0; i < size; i++)
 	{
 
-		total_opposite = total_opposite + a[(j*size)+i];
-		++j;
+		total_opposite = total_opposite + a[(i*size)+j];
+		--j;
 	}
 
 	printf("%d, %d\n", total, total_opposite);
