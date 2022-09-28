@@ -12,9 +12,13 @@ int factorial(int n)
 	int fact;
 	
 	fact = 0;
-	if (n = 1)
+	if (n = 0)
 	{
-		return(fact)
+		return(n + 1)
+	}
+	else if(n < 0)
+	{
+		return (-1);
 	}
 	
 	fact += factorial(n - 1);
