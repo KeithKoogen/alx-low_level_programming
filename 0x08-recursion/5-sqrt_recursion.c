@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
 		}
 		else if (sqrt < n)
 		{
-			return _sqrt_recursion(sqrt++);
+			return _sqrt_recursion(++sqrt);
 		}
 		else
 		{
