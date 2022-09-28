@@ -9,21 +9,26 @@
 int _sqrt_recursion(int n)
 {
 	int sqrt;
-	sqrt = n - 1;
+	sqrt = 0;
 	
-	if (sqrt * sqrt == n)
+	if (n < 0)
 	{
-		return (sqrt);
-	}
-	else if (sqrt * sqrt != n && sqrt > -1)
-	{
-		
-		return (_sqrt_recursion(n));
-		sqrt--;
+		return (-1)
 	}
 	else
 	{
-		return (-1);
+		if (sqrt * sqrt == n)
+		{
+			return (sqrt);
+		}
+		else if (sqrt < n)
+		{
+			return _sqrt_recursion(sqrt++);
+		}
+		else
+		{
+			return (-1);
+		}
 	}
 	
 }
