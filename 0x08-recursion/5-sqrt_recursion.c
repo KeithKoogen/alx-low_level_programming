@@ -17,8 +17,8 @@ int _sqrt_recursion(int n)
 	}
 	else if (sqrt * sqrt != n && sqrt < n)
 	{
-		sqrt++;
-		_sqrt_recursion(n);
+		sqrt--;
+		return (_sqrt_recursion(n));
 	}
 	else
 	{
