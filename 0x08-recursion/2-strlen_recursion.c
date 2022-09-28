@@ -22,6 +22,11 @@ int _strlen_recursion(char *s)
 		len++;
 		
 	}
+	else
+	{
+		return (len);
+	}
+	
 	
 return (len);
 	
