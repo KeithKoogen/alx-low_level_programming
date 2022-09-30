@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int i, j, x;
 
 	x = 0;
+	j = 0;
 
 	if (argc == 1)
 	{
