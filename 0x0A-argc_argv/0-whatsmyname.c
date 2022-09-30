@@ -5,7 +5,7 @@
 * Return: an int
 */
 
-int main(char *argv[])
+int main(void)
 {
 	
 	printf("%s\n", argv[0]);
