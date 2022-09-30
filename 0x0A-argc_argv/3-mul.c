@@ -9,10 +9,14 @@
 
 int main(int argc, char *argv[])
 {
+	int x, y;
+	
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
 
 	if (argc == 3)
 	{
-		printf("%d\n", argv[1] + argv[2]);
+		printf("%d\n", x + y);
 		return (0);
 	}
 	else
