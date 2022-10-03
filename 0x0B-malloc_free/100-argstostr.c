@@ -36,10 +36,10 @@ char *argstostr(int ac, char **av)
 		j = 0;
 		while (av[i][j] != '\0')
 		{
-			ptr[i][j] = av[i][j];
+			*(ptr + i + j) = av[i][j];
 
 		}
-		ptr[i][j + 1] = '\n';
+		*(ptr + i + j + 1) = '\n';
 
 	}
 return (ptr);
