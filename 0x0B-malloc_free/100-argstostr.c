@@ -11,6 +11,9 @@ char *argstostr(int ac, char **av)
 {
 	char *ptr;
 	int i, j, count;
+	
+	i = 0;
+	j = 0;
 
 	count = 0;
 
@@ -21,9 +24,12 @@ char *argstostr(int ac, char **av)
 	{
 		j = 0;
 		while (av[i][j] != '\0')
+		{
 			++j;
+			++count;
+		}
 
-		count = count + j;
+		
 	}
 
 	ptr = malloc((sizeof(char) * count) + (sizeof(char) * ac));
