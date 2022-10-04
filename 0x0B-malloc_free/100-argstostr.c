@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 
 	for (p = &av[0][1]; p != NULL; p++)
 	{
-		if (*p = '\0')
+		if (*p == '\0')
 		{
 			ptr[i] = '\n';
 		}
