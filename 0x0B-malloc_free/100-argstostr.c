@@ -9,7 +9,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *ptr;
+	char *ptr, p;
 	int i, j, count;
 	
 	i = 0;
@@ -43,17 +43,16 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 
-	while (av[i] != NULL)
+	for (p = &av[0][1]; p != NULL; p++)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
+		if (*p = '\0')
 		{
-			ptr[i + j] = av[i][j];
-			j++;
-
+			ptr[i] = '\n';
 		}
-		i++;
-		
+		else
+		{
+		ptr[i] = *p;
+		}
 	}
 	
 return (ptr);
