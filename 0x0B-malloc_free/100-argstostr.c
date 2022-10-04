@@ -48,7 +48,7 @@ char *argstostr(int ac, char **av)
 		j = 0;
 		while (av[i][j] != '\0')
 		{
-			*(ptr + i + j) = av[i][j];
+			ptr[i + j] = av[i][j];
 			j++;
 
 		}
