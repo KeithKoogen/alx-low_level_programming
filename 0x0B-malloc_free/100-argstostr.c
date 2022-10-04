@@ -9,8 +9,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *ptr, *p;
-	int i, count;
+	char *ptr;
+	int i, count, *p;
 	
 	i = 0;
 	
@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	
-for (p = &av[0][0]; p != NULL; p++)
+	for (p = &av[0][0]; p != NULL; p++)
 	{
 		++count;
 	}
