@@ -9,7 +9,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	char **ptr;
+	char *ptr;
 	int i, j, count;
 	
 	i = 0;
@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 		{
 			++j;
 			++count;
-			*(ptr + i + j) = malloc(sizeof(char *));
+			ptr + i + j = malloc(sizeof(char *));
 		}
 	}
 	
@@ -47,10 +47,10 @@ char *argstostr(int ac, char **av)
 		j = 0;
 		while (av[i][j] != '\0')
 		{
-			**(ptr + i + j) = av[i][j];
+			*(ptr + i + j) = av[i][j];
 
 		}
-		**(ptr + i + j + 1) = '\n';
+		*(ptr + i + j + 1) = '\n';
 
 	}
 return (ptr);
