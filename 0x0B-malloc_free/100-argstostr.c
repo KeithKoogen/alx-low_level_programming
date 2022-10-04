@@ -52,7 +52,7 @@ char *argstostr(int ac, char **av)
 			++j;
 
 		}
-		*(ptr + i + j + 1) = '\n';
+		
 
 	}
 return (ptr);
