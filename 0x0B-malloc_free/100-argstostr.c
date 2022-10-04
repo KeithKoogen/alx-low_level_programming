@@ -2,7 +2,7 @@
 
 /**
 * argstostr - concatenates all the arguments of a program
-* @ac: number of strings
+* @ac: argument count
 * @av: 2d array of char
 * Return: a pointer to a string
 */
@@ -20,11 +20,18 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	
+	ptr = malloc((sizeof(av));
+	
+	if (ptr == NULL)
+		return (NULL);
+	
+	
 	for (i = 0; i < ac; i++)
 	{
-		j = 0;
+		
 		while (av[i][j] != '\0')
 		{
+			
 			++j;
 			++count;
 		}
@@ -32,10 +39,7 @@ char *argstostr(int ac, char **av)
 		
 	}
 
-	ptr = malloc((sizeof(char *) * count * ac) + (sizeof(char) * ac));
-	
-	if (ptr == NULL)
-		return (NULL);
+
 
 	for (i = 0; i < ac; i++)
 	{
