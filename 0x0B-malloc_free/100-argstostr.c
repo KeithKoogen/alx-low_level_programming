@@ -16,6 +16,7 @@ char *argstostr(int ac, char **av)
 	j = 0;
 
 	count = 0;
+	
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -48,6 +49,7 @@ char *argstostr(int ac, char **av)
 		while (av[i][j] != '\0')
 		{
 			*(ptr + i + j) = av[i][j];
+			++j;
 
 		}
 		*(ptr + i + j + 1) = '\n';
