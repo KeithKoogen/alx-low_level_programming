@@ -20,24 +20,22 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	
-	ptr = malloc(sizeof(av) * ac);
-	
-	if (ptr == NULL)
-		return (NULL);
-	
+		
 	
 	for (i = 0; i < ac; i++)
 	{
 		
 		while (av[i][j] != '\0')
 		{
-			*(ptr + i + j) = malloc(sizeof(char *));
 			++j;
 			++count;
 		}
-
-		
 	}
+	
+	ptr = malloc(sizeof(av) * count);
+	
+	if (ptr == NULL)
+		return (NULL);
 
 
 
