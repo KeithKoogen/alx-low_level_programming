@@ -27,18 +27,15 @@ char *argstostr(int ac, char **av)
 	while (av[i] != NULL)
 	{
 		j = 0;
-		while (av[i] != NULL)
+		while (av[i][j] != '\0')
 		{
 			++j;
-			++count;
-			if (av[i][j] == '\0')
-				break;
-			
+			++count;			
 		}
 		++i;
 	}
 	
-	ptr = malloc((sizeof(av) * ac) * count);
+	ptr = malloc((sizeof(av) * (ac + 1) * count);
 	
 	if (ptr == NULL)
 		return (NULL);
