@@ -10,10 +10,10 @@
 char *argstostr(int ac, char **av)
 {
 	char *ptr, *p;
-	int i, j, count;
+	int i, count;
 	
 	i = 0;
-	j = 0;
+	
 
 	count = 0;
 	
