@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	
-	ptr = malloc((sizeof(av));
+	ptr = malloc(sizeof(av));
 	
 	if (ptr == NULL)
 		return (NULL);
