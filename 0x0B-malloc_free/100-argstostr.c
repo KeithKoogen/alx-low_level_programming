@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 		{
 			++j;
 			++count;
-			*(ptr[i][j]) = malloc(sizeof(char *));
+			*(ptr + i + j) = malloc(sizeof(char *));
 		}
 	}
 	
