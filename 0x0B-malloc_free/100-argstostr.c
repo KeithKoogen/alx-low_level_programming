@@ -21,19 +21,13 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	
-
+for (p = &av[0][1]; p != NULL; p++)
+	{
+		++count;
+	}
 	
 		
-	while (av[i] != NULL)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			++j;
-			++count;			
-		}
-		i++;
-	}
+
 	
 	ptr = malloc((sizeof(av) * (ac + 1) * (count + 1)));
 	
