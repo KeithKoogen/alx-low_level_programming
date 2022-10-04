@@ -53,6 +53,7 @@ char *argstostr(int ac, char **av)
 			++j;
 
 		}
+		++i;
 		
 	}
 	
