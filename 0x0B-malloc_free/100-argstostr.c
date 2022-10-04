@@ -50,7 +50,7 @@ char *argstostr(int ac, char **av)
 		while (av[i][j] != '\0')
 		{
 			*(ptr + i + j) = av[i][j];
-			++j;
+			j++;
 
 		}
 		++i;
