@@ -23,11 +23,11 @@ char *argstostr(int ac, char **av)
 
 	
 		
-	
-	for (i = 0; i < ac; i++)
+	i = 0;
+	while (av[i] != NULL)
 	{
 		j = 0;
-		while (av[i][j] != NULL)
+		while (av[i] != NULL)
 		{
 			++j;
 			++count;
@@ -35,6 +35,7 @@ char *argstostr(int ac, char **av)
 				break;
 			
 		}
+		++i;
 	}
 	
 	ptr = malloc((sizeof(av) * ac) * count);
