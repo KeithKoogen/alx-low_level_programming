@@ -6,7 +6,11 @@
 * @s2: a string
 * @n: number of bytes to copy from a2
 * Return: a pointer to new string
+* strlen - returns length of string
+* @s: a string
+* Return: an integer length
 */
+
 int strlen(char *s);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
