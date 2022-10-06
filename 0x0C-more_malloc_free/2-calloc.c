@@ -10,7 +10,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i, total_size;
-	char *ptr, ptr2;
+	char *ptr;
+	void *ptr2;
 
 	total_size = nmemb * size;
 
