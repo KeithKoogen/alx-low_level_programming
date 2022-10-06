@@ -11,7 +11,17 @@
 * Return: an integer length
 */
 
-int slen(char *s);
+unsigned int slen(char *s)
+{
+	int i;
+
+	i = 0;
+
+	while (s[i] != '\0')
+		++i;
+
+	return (i);
+}
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -52,14 +62,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	return (ptr);
 }
 
-unsigned int slen(char *s)
-{
-	int i;
 
-	i = 0;
-
-	while (s[i] != '\0')
-		++i;
-
-	return (i);
-}
