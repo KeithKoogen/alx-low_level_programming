@@ -52,9 +52,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	
 	for (k = 0; k < n; k++)
 	{
-		ptr[i] = s2[k];
+		ptr[i + k] = s2[k];
 		printf("%c", ptr[i]);
-		++i;
+		
 		
 		
 	}
