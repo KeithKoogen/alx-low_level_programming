@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	n = len_s2;
 	}
 
-	
+
 	ptr = malloc((sizeof(s1)) + (n * sizeof(char *)));
 
 	if (ptr == NULL)
@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[i] = s1[i];
 	}
-	
+
 	if (s2 != NULL)
 	for (k = 0; k < n; k++)
 	{
