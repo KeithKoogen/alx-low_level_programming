@@ -23,8 +23,8 @@ int numsonly(char *str)
 
 /**
 * main - multiplies two positive numbers
-* @num1: integer one
-* @num2: integer two
+* @argv: arguments in array
+* @argc: number of arguments
 * Return: void
 */
 
