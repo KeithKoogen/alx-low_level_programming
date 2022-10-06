@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
 	*ptr = i * k;
 
 	printf("%d\n", *ptr);
+	free(ptr);
 
 	return (0);
 
