@@ -1,10 +1,7 @@
 #include "main.h"
 
+
 /**
-* string_nconcat -  concatenates two strings
-* @s1: a string
-* @s2: a string
-* @n: number of bytes to copy from a2
 * slen - returns length of string
 * @s: a string
 * Return: an integer length
@@ -22,6 +19,13 @@ unsigned int slen(char *s)
 	return (i);
 }
 
+/**
+* string_nconcat -  concatenates two strings
+* @s1: a string
+* @s2: a string
+* @n: number of bytes to copy from a2
+* Return: a pointer to new string
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
