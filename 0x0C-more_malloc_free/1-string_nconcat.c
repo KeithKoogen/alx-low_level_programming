@@ -11,7 +11,7 @@
 * Return: an integer length
 */
 
-int strlen(char *s);
+int slen(char *s);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -22,8 +22,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_s2 = 0;
 	i = 0;
 
-	len_s1 = strlen(s1);
-	len_s2 = strlen(s2);
+	len_s1 = slen(s1);
+	len_s2 = slen(s2);
 
 	while (s2[len_s2] != '\0')
 		++len_s2;
@@ -52,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	return (ptr);
 }
 
-unsigned int strlen(char *s)
+unsigned int slen(char *s)
 {
 	int i;
 
