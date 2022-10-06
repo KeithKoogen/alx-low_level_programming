@@ -49,10 +49,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == NULL)
 		return (NULL);
 
-
+	if (s1 != NULL)
+	{
 	for (i = 0; i < len_s1; i++)
 	{
 		ptr[i] = s1[i];
+	}
 	}
 
 	if (s2 != NULL)
