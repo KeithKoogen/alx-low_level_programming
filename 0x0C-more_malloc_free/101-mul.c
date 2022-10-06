@@ -6,7 +6,7 @@
 * Return: a boolean
 */
 
-bool numsonly(char *str);
+int numsonly(char *str)
 {
 	int i;
 	
@@ -15,10 +15,10 @@ bool numsonly(char *str);
 	while (str[i] != '\0')
 	{
 	if (str[i] < 48 && str[i] > 57) 
-	return (false);
+	return (1);
 	}
 	
-	return (true);
+	return (0);
 }
 
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	
-	if (numsonly(argv[1]) != true || numsonly(argv[2]) != true)
+	if (numsonly(argv[1]) == 1 || numsonly(argv[2]) == 1)
 	{
 		printf("Error\n");
 		exit(98);
