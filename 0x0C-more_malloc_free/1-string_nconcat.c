@@ -11,10 +11,10 @@ unsigned int slen(char *s)
 	int i;
 
 	i = 0;
-
 	while (s[i] != '\0')
 		++i;
-
+	if (s == NULL)
+		return(1);
 	return (i);
 }
 
@@ -41,11 +41,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		++len_s2;
 
 	if (n >= len_s2)
-	{
 	n = len_s2;
-	}
-	ptr = malloc((sizeof(s1)) + (n * sizeof(char *)));
 
+	ptr = malloc((sizeof(s1)) + (n * sizeof(char *)));
 	if (ptr == NULL)
 		return (NULL);
 
@@ -66,6 +64,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	ptr[len_s1 + n] = '\0';
-
 	return (ptr);
 }
