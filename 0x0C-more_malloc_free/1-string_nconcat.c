@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
 * slen - returns length of string
 * @s: a string
@@ -51,21 +50,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (ptr == NULL)
 		return (NULL);
-
-	for (i = 0; i < len_s1; i++)
+	
+	if (s1 != NULL)
 	{
-		ptr[i] = s1[i];
+		for (i = 0; i < len_s1; i++)
+		{
+			ptr[i] = s1[i];
+		}
+		free(s1);
 	}
 
 	if (s2 != NULL)
-	for (k = 0; k < n; k++)
 	{
-		ptr[len_s1 + k] = s2[k];
+		for (k = 0; k < n; k++)
+		{
+			ptr[len_s1 + k] = s2[k];
+		}
+		free(s2);
 	}
-	
+
 	ptr[len_s1 + n] = '\0';
-	
+
 	return (ptr);
 }
-
-
