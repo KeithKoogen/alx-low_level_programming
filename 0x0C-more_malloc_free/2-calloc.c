@@ -9,13 +9,13 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned i,nb;
-	char *p,*q;
+unsigned int i,nb;
+char *p,*q;
 
-    nb = nmemb * size;
+nb = nmemb * size;
     
     if((p = q = malloc(nb)) != NULL)
-        for(i = 0; i <nb; i++)
+        for(i = 0; i < nb; i++)
             *p++ = 0;
     return q;
 
