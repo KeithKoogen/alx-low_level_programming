@@ -14,7 +14,7 @@ unsigned int slen(char *s)
 	while (s[i] != '\0')
 		++i;
 	if (s == NULL)
-		return(1);
+		return (1);
 	return (i);
 }
 
