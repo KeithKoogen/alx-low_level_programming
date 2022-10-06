@@ -5,8 +5,7 @@
 * @s1: a string
 * @s2: a string
 * @n: number of bytes to copy from a2
-* Return: a pointer to new string
-* strlen - returns length of string
+* slen - returns length of string
 * @s: a string
 * Return: an integer length
 */
