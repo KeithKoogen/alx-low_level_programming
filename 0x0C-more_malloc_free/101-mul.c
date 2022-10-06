@@ -14,7 +14,7 @@ int numsonly(char *str)
 
 	while (str[i] != '\0')
 	{
-	if (str[i] < 48 && str[i] > 57) 
+	if (str[i] < 48 && str[i] > 57)
 	return (1);
 	}
 
