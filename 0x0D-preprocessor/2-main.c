@@ -8,7 +8,10 @@
 
 int main(void)
 {
-	printf("%s\n", _FILE_);
+	char *filename;
+	
+	filename = _FILE_;
+	printf("%s\n", filename);
 	
 	return (0);
 }
