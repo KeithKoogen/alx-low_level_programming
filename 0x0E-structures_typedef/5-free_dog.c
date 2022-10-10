@@ -11,9 +11,8 @@
 void free_dog(dog_t *d)
 {
 	char *name_block;
-	char *owner_block;
-	
-	name_block = &(d->name)
+		
+	name_block = d->name;
 	free(name_block);
 	free(d);
 	
