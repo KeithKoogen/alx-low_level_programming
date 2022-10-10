@@ -1,4 +1,4 @@
-/** 
+/**
 * struct dog - creates a dog
 * @name: name of dog
 * @age: age of dog
