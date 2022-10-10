@@ -10,8 +10,11 @@
 
 void free_dog(dog_t *d)
 {
-	free(d->name);
-	free(d->owner);
+	char *name_block;
+	char *owner_block;
+	
+	name_block = &(d->name)
+	free(name_block);
 	free(d);
 	
 }
