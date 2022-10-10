@@ -1,3 +1,9 @@
+/** 
+* struct dog - creates a dog
+* @name: name of dog
+* @age: age of dog
+* @owner: name of owner
+*/
 struct dog
 {
 	char *name;
