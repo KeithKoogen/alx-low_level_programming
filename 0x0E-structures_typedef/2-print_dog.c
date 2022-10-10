@@ -38,7 +38,7 @@ void print_dog(struct dog *d)
 		if (d->owner != 0)
 		{
 			owner = d->owner;
-			printf("Name: %s\n", owner);
+			printf("Owner: %s\n", owner);
 		}
 		else
 		{
