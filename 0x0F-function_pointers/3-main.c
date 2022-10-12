@@ -25,6 +25,10 @@ int main(int argc, char *argv[])
 
 	
 	printf("%d\n", i);
+	} else
+	{
+		prinf("Error");
+		return (1);
 	}
 
 
