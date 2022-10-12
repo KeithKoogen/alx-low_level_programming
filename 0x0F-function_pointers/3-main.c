@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	n = get_op_func(s);
+		if (n == NULL)
+		{
+			printf("Error");
+			return (1);
+		}
 	i = (*n)(a, b);
 
 	
