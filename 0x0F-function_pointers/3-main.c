@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 	char *s;
 	
 	printf("%s",argv[1]);
-	
+	if (argc > 0)
+	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	s = argv[2];
@@ -24,6 +25,7 @@ int main(int argc, char *argv[])
 
 	
 	printf("%d\n", n);
+	}
 	
 
 	return (0);
