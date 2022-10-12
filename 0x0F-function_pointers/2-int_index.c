@@ -9,17 +9,14 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 
-	int (*ptr)(int);
 	int i;
-
-	ptr = cmp;
 
 	if (size <= 0)
 		return (-1);
 
 	while (i < size)
 	{
-		if ((*ptr)(array[i]) != 0)
+		if (cmp(array[i] != 0)
 			return (i);
 		++i;
 
