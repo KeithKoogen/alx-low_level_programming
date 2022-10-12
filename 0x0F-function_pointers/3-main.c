@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 	int a, b, n, *f;
 	char *s;
 	
-	
+	f = get_op_func;
 	printf("%s",argv[1]);
 	
 	a = argv[1];
 	b = argv[3];
 	s = argv[2];
 	
-	n = (*get_op_func(s))(a, b);
+	n = (*f(s))(a, b);
 
 	
 	printf("%d\n", n);
