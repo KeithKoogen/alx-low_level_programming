@@ -25,7 +25,6 @@ int (*get_op_func(char *s))(int, int)
 	{
 	if (s == ops[i].op)
 	{
-		printf("this is right");
 		return (ops[i].f);
 	}
 	
