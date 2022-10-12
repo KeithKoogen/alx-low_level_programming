@@ -15,28 +15,26 @@ int main(int argc, char *argv[])
 	int a, b, i, (*n)(int, int);
 	char *s;
 	
+	a = 0;
+	b = 0;
+	i = 0;
+
 	if (argc == 4)
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-		if (strlen(argv[2]) == 1)
-		{
+		
 	s = argv[2];
-		}
-		else
-		{
-			printf("Error");
-			return (1);
-		}
 	n = get_op_func(s);
-		if (n == NULL)
-		{
-			printf("Error");
-			return (1);
-		}
+
+	if (strlen(argv[2]) != 1 || n == NULL)
+	{
+		printf("Error");
+		return (1);
+	}
+
 	i = (*n)(a, b);
 
-	
 	printf("%d\n", i);
 	} else
 	{
