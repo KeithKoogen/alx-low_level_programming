@@ -18,10 +18,9 @@ int main(int argc, char *argv[])
 	if (argc == 4)
 	{
 	a = atoi(argv[1]);
-	b = atoi(argv[1]);
+	b = atoi(argv[3]);
 	s = argv[2];
 	
-		s = "+";
 	n = get_op_func(s);
 	i = (*n)(a, b);
 
