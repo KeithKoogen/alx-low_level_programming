@@ -21,10 +21,13 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 	
-	if (s == "+")
+	if (s == ops[0].op)
+	{
+		printf("this is right");
 		return (ops[i].f);
+	}
 	
-		++i;
+	++i;
 	
 
 	return (NULL);
