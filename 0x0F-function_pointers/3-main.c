@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	char *s;
 	
 	i = argc;
+	i = i * 1;
 	
 	printf("%s",argv[0]);
 
