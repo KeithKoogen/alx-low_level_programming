@@ -17,10 +17,10 @@ int main(int argc, char *argv[])
 	i = argc;
 	i = i * 1;
 	
-	printf("%s",argv[0]);
+	printf("%s",argv[1]);
 
-	a = atoi(argv[0]);
-	b = atoi(argv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[1]);
 	s = argv[1];
 
 	n = (*get_op_func(s))(a, b);
