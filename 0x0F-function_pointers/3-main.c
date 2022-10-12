@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	s = argv[2];
 	
-	n = &((*get_op_func)(s));
-	i = (*n)(a, b);
+	n = ((*get_op_func)(s));
+	i = (*n)(a);
 
 	
 	printf("%d\n", i);
