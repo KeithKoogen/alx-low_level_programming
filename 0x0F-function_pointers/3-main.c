@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, n;
+	int a, b, (*n)(int.int);
 	char *s;
 	
 	printf("%s",argv[1]);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	s = argv[2];
 	
-	n = (*get_op_func(s))(a, b);
+	n = (*get_op_func(s));
 
 	
 	printf("%d\n", n);
