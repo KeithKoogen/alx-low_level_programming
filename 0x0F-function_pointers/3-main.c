@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 	int a, b, i, (*n)(int, int);
 	char *s;
 	
-	printf("%s",argv[1]);
 	if (argc == 4)
 	{
 	a = atoi(argv[1]);
