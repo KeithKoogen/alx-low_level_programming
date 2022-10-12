@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	b = 0;
 	i = 0;
 
-	if (argc == 4 && strlen(argv[2]) == 1)
+	if (argc == 4)
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -32,14 +32,14 @@ int main(int argc, char *argv[])
 		else
 		{
 			printf("Error\n");
-			return (1);
+			exit (99);
 		}
-
-	if (n == NULL)
-	{
-		printf("Error\n");
-		return (1);
-	}
+		
+		if ((strcmp(s, "/") || strcmp(s, "%")) && argv[3] == 0)
+		{
+			printf("Error\n");
+			exit (100);
+		}
 
 		i = (*n)(a, b);
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return (1);
+		exit (98);
 	}
 
 
