@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 
 	s = argv[2];
-		if (strcmp(s, "+"))
+		if (strcmp(s, "+") || strcmp(s, "-") || strcmp(s, "*") || strcmp(s, "/") || strcmp(s, "%"))
 		{
 			n = get_op_func(s);
 		}
