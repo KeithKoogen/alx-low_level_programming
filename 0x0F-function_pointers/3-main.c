@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	
 	if (argc == 3)
 	{
+		printf("%s",argv[0]);
 
 	a = atoi(argv[0]);
 	b = atoi(argv[2]);
