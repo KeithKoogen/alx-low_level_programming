@@ -18,8 +18,15 @@ int main(int argc, char *argv[])
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+		if (strlen(s) == 1)
+		{
 	s = argv[2];
-	
+		}
+		else
+		{
+			printf("Error");
+			return (1);
+		}
 	n = get_op_func(s);
 	i = (*n)(a, b);
 
