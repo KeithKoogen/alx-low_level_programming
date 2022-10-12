@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	char *s;
 	
 	printf("%s",argv[1]);
-	if (argc > 0)
+	if (argc == 4)
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
