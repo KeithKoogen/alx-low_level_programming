@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	b = 0;
 	i = 0;
 
-	if (argc == 4)
+	if (argc == 4 && strlen(argv[2]) == 1)
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	n = get_op_func(s);
 
-	if (strlen(argv[2]) != 1 || n == NULL)
+	if (n == NULL)
 	{
 		printf("Error\n");
 		return (1);
