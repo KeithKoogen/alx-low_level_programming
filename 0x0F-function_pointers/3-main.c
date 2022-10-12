@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	s = argv[2];
 	
+		s = "+";
 	n = get_op_func(s);
 	i = (*n)(a, b);
 
