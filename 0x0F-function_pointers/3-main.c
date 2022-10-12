@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
 	int a, b, n;
 	char *s;
 	
-	if (argc == 4)
-	{
+	
 		printf("%s",argv[0]);
 
 	a = atoi(argv[0]);
@@ -24,7 +23,7 @@ int main(int argc, char *argv[])
 
 	n = (*get_op_func(s))(a, b);
 	printf("%d\n", n);
-	}
+	
 
 	return (0);
 
