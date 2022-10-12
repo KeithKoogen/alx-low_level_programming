@@ -26,6 +26,11 @@ int main(int argc, char *argv[])
 	
 	printf("%d\n", i);
 	}
+	else
+	{
+		printf("Error");
+		return (1);
+	}
 	
 
 	return (0);
