@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	
 	n = ((*get_op_func)(s));
-	i = (*n)(a);
+	i = (*n)(a, b);
 
 	
 	printf("%d\n", i);
