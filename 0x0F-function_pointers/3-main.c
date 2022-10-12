@@ -33,9 +33,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	i = (*n)(a, b);
+		i = (*n)(a, b);
 
-	printf("%d\n", i);
+		printf("%d\n", i);
+		return (0);
 	}
 	else
 	{
