@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 	f = get_op_func;
 	printf("%s",argv[1]);
 	
-	a = argv[1];
-	b = argv[3];
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 	s = argv[2];
 	
 	n = (*f(s))(a, b);
