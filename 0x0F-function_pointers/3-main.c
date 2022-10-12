@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 			exit(100);
 		}
 		n = get_op_func(s);
-	
-	if (n == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-		
+
+		if (n == NULL)
+		{
+			printf("Error\n");
+			exit(99);
+		}
+
 		i = (*n)(a, b);
 
 		printf("%d\n", i);
