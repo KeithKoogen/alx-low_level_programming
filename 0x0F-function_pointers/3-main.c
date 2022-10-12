@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
 	i = (*n)(a, b);
 
 	printf("%d\n", i);
-	return (0);
+
 
 }
