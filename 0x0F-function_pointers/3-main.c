@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[1]);
 	s = argv[1];
 
-	n = (*get_op_func(s))(a, b);
+	
 	printf("%d\n", n);
 	
 
