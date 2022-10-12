@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int a, b, i, (*n)(int, int);
 	char *s;
-	
+
 	a = 0;
 	b = 0;
 	i = 0;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-		
+
 	s = argv[2];
 	n = get_op_func(s);
 
@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
 	i = (*n)(a, b);
 
 	printf("%d\n", i);
-	} else
+	}
+	else
 	{
 		printf("Error");
 		return (1);
