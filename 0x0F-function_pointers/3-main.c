@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int a, b, n;
 	char *s;
 	
-	if (argc == 3)
+	if (argc == 4)
 	{
 
 	a = atoi(argv[1]);
