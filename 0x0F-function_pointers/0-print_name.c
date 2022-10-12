@@ -1,4 +1,4 @@
-include <string.h>
+#include <string.h>
 /**
 * print_name - prints name
 * @name: name as input string
