@@ -7,7 +7,7 @@
 * Return: an integer
 */
 
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
         {"+", op_add},
@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 	while (i < 5)
 	{
 		if (ops[i].op == s)
-			return (ops[i].f);
+			return (ops[i].f(a, b));
 		++i;
 	}
 
