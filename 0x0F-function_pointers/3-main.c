@@ -11,18 +11,17 @@
 
 int main(int argc, char *argv[])
 {
-	int n, i;
+	int a, b, n, *f;
 	char *s;
 	
-	i = argc;
-	i = i * 1;
 	
 	printf("%s",argv[1]);
-
-
+	
+	a = argv[1];
+	b = argv[3];
 	s = argv[2];
 	
-	n = (*get_op_func(s))(1, 2);
+	n = (*get_op_func(s))(a, b);
 
 	
 	printf("%d\n", n);
