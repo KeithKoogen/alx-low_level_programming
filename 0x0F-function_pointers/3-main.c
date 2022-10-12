@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, n, *f;
+	int a, b, n, (*f(s))(a, b);
 	char *s;
 	
 	f = get_op_func;
