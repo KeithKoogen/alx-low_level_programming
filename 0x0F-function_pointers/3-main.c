@@ -9,13 +9,14 @@
 * Return: void
 */
 
-int main(char *argv[])
+int main(int argc, char *argv[])
 {
-	int a, b, n;
+	int a, b, n, i;
 	char *s;
 	
+	i = argc;
 	
-		printf("%s",argv[0]);
+	printf("%s",argv[0]);
 
 	a = atoi(argv[0]);
 	b = atoi(argv[2]);
