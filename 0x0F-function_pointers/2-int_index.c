@@ -3,11 +3,12 @@
 * @array: an array of int
 * @size: size of array
 * @cmp: pointer to function
+* Return: an integer
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	
+
 	int (*ptr)(int);
 	int i;
 
