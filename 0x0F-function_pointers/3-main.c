@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	i = (*n(a, b));
 
 	
-	printf("%d\n", n);
+	printf("%d\n", i);
 	}
 	
 
