@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 	int a, b, n;
 	char *s;
 	
-	f = get_op_func;
 	printf("%s",argv[1]);
 	
 	a = atoi(argv[1]);
