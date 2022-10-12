@@ -25,7 +25,15 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 
 	s = argv[2];
-	n = get_op_func(s);
+		if (s == "+" || s == "-" || s == "*" || s == "/" || s == "%")
+		{
+			n = get_op_func(s);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 
 	if (n == NULL)
 	{
