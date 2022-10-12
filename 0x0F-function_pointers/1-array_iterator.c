@@ -22,8 +22,5 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		(*ptr)(array[i]);
 		++i;
 	}
-	else
-	{
-		exit(98);
-	}
+
 }
