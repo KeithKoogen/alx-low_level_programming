@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	if (strlen(argv[2]) != 1 || n == NULL)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
