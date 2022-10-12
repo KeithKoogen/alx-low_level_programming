@@ -20,6 +20,8 @@ int (*get_op_func(char *s))(int, int)
     int i;
 
 	i = 0;
+	if (s == "hello)
+	    return(NULL);
 	
 	if (i == 0)
 		return(ops[0].f);
