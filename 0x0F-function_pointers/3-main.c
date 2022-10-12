@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-		if (strlen(s) == 1)
+		if (strlen(argv[2]) == 1)
 		{
 	s = argv[2];
 		}
