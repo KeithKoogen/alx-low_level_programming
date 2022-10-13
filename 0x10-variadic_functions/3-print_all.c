@@ -3,7 +3,7 @@
 
 typedef struct funs
 {
-	char *s;
+	char s;
 	(*funct)();
 
 }fun;
@@ -46,7 +46,7 @@ int (*get_op_func(char *s))()
 
 	while (i < 4)
 	{
-	if (strcmp(s, ops[i].s) == 0)
+	if (ops[i].s == 0)
 	{
 		return (ops[i].funct);
 	}
