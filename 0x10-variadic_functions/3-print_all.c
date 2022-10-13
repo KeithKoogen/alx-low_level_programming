@@ -58,30 +58,7 @@ void (*get_op_func(char s))()
 	return (NULL);
 }
 
-char * return_type(char s)
-{
-	fun ops[] = {
-	{'i', print_int, "int"},
-	{'c', print_char, "int"},
-	{'f', print_float, "double"},
-	{'s', print_string, "char *"},
-	};
-	int i;
 
-	i = 0;
-
-	while (i < 4)
-	{
-	if (ops[i].s == s)
-	{
-		return (ops[i].type);
-	}
-
-	++i;
-	}
-
-	return (NULL);
-}
 /**
 * print_all - prints anything
 * @format: list of types of arguments
