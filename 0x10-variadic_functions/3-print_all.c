@@ -92,15 +92,14 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int i;
 	void (*functs)();
-	char *str;
 	
 	va_start(args, format);
 	i = 0;
 	while (format[i] != '\0')
 	{
 		functs = get_op_func(format[i]);
-		str = return_type(format[i]);
-		functs(va_arg(args, str));
+		
+		functs(va_arg(args, return_type(format[i])));
 
 						 
 		++i;
