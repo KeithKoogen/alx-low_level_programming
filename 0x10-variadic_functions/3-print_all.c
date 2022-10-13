@@ -21,10 +21,10 @@ void print_all(const char * const format, ...)
 			printf("%d", va_arg(args, int));
 		
 		if (format[i] == 'c')
-			printf("%c", va_arg(args, char));
+			printf("%c", va_arg(args, int));
 		
 		if (format[i] == 'f')
-			printf("%f", va_arg(args, float));
+			printf("%f", va_arg(args, double));
 		
 		if (format[i] == 's')
 			printf("%s", va_arg(args, char *));
