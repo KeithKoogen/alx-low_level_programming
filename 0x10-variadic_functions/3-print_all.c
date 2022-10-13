@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0')
 	{
 		functs = get_op_func(format[i]);
-		functs(va_arg(args));
+		functs(va_arg(args, int));
 
 						 
 		++i;
