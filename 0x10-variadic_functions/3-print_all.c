@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		printf("%s", format);
+		printf("%i", format);
 		++i;
 	}
 	
