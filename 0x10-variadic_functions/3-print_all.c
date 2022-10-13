@@ -99,7 +99,7 @@ void print_all(const char * const format, ...)
 	{
 		functs = get_op_func(format[i]);
 		
-		functs(va_arg(args, format[i]));
+		functs(va_arg(args, int));
 
 						 
 		++i;
