@@ -42,7 +42,6 @@ void (*get_op_func(char s))()
 	{'s', print_string, "char *"},
 	};
 	int i;
-	char *ptr;
 
 	i = 0;
 
