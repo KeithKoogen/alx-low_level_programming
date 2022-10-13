@@ -3,7 +3,7 @@
 
 typedef struct funs
 {
-	char s;
+	char *s;
 	(*funct)();
 
 }fun;
