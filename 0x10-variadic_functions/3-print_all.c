@@ -29,6 +29,8 @@ void print_all(const char * const format, ...)
 		if (format[i] == 's')
 			printf("%s", va_arg(args, char *));
 		
+		if (format[i + 1] != '\0')
+			printf(", ");
 						 
 		++i;
 	}
