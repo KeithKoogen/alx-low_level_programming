@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-void 
+
 
 /**
 * print_all - prints anything
