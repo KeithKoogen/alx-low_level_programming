@@ -32,7 +32,7 @@ void print_string(char *s)
 
 
 
-int (*get_op_func(char s))()
+void (*get_op_func(char s))()
 {
 	fun ops[] = {
 	{'i', print_int},
