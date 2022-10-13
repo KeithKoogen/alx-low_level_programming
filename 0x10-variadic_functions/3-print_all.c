@@ -35,10 +35,10 @@ void print_string(char *s)
 int (*get_op_func(char s))()
 {
 	fun ops[] = {
-	{"i", print_int},
-	{"c", print_char},
-	{"f", print_float},
-	{"s", print_string},
+	{'i', print_int},
+	{'c', print_char},
+	{'f', print_float},
+	{'s', print_string},
 	};
 	int i;
 
