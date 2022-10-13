@@ -9,6 +9,7 @@ typedef struct funs
 
 void print_int()
 {
+	
 	printf("%d", va_arg(args, int));
 }
 
