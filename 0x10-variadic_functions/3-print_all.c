@@ -12,9 +12,9 @@ void print_all(const char * const format, ...)
 	int i;
 	
 	va_start(args, format);
-	while (format != '\0')
+	while (*format != '\0')
 	{
-		*format == 'c' ? printf("%c", va_arg(args, char);
+		*format == 'c' ? printf("%c", va_arg(args, char));
 		
 		++format;
 	}
