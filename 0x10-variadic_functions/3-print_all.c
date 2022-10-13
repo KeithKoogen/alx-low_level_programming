@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		*functs = get_op_func(format[i]);
+		functs = get_op_func(format[i]);
 		functs(va_arg(args));
 
 						 
