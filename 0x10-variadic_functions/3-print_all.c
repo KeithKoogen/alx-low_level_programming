@@ -17,7 +17,19 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		printf("%i", format);
+		if (format[i] == 'i')
+			printf("%d", va_arg(args, int));
+		
+		if (format[i] == 'c')
+			printf("%c", va_arg(args, char));
+		
+		if (format[i] == 'f')
+			printf("%f", va_arg(args, float));
+		
+		if (format[i] == 's')
+			printf("%s", va_arg(args, char *));
+		
+						 
 		++i;
 	}
 	
