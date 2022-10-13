@@ -5,6 +5,7 @@ typedef struct funs
 {
 	char s;
 	void (*funct)();
+	char *type;
 
 }fun;
 
@@ -35,10 +36,10 @@ void print_string(char *s)
 void (*get_op_func(char s))()
 {
 	fun ops[] = {
-	{'i', print_int},
-	{'c', print_char},
-	{'f', print_float},
-	{'s', print_string},
+	{'i', print_int, "int"},
+	{'c', print_char, "int"},
+	{'f', print_float, "double"},
+	{'s', print_string, "char *"},
 	};
 	int i;
 
