@@ -5,53 +5,58 @@ typedef struct funs
 {
 	char s;
 	(*funct)();
-} funs;
 
-void print_int()
+};
+funs;
+
+
+void print_int(int n)
 {
 	
-	printf("%d", va_arg(args, int));
+	printf("%d", n);
 }
 
-void print_char()
+void print_char(int n)
 {
-	printf("%c", va_arg(args, int));
+	printf("%c", n);
 }
 
-void print_float()
+void print_float(double n)
 {
-	printf("%f", va_arg(args, double));
+	printf("%f", n);
 }
 
 void print_string(char *s)
 {
-	printf("%s", va_arg(args, char *));
+	printf("%s", s);
 }
 
-(*func)()function_type(char c)
+
+
+int (*get_op_func(char *s))()
 {
-	funs fun[] = {
-		{'i', print_int},
-		{'c', print_char},
-		{'f', print_float},
-		{'s', print_string}
+	funs ops[] = {
+	{"i", print_int},
+	{"c", print_char},
+	{"f", print_float},
+	{"s", print_string},
 	};
 	int i;
-	
+
 	i = 0;
-	
+
 	while (i < 4)
 	{
-		if (fun[i].s == c)
-		{
-			return (fun[i].funct);
-		}
-		++i;
+	if (strcmp(s, ops[i].s) == 0)
+	{
+		return (ops[i].funct);
 	}
-	
+
+	++i;
+	}
+
 	return (NULL);
 }
-
 /**
 * print_all - prints anything
 * @format: list of types of arguments
@@ -67,8 +72,8 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		*functs = function_type(format[i]);
-		functs();
+		*functs = get_op_func(format[i]);
+		functs(va_arg(args));
 
 						 
 		++i;
