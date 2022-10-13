@@ -12,7 +12,7 @@ typedef struct funs
 
 void print_int(int n)
 {
-	
+
 	printf("%d", n);
 }
 
@@ -69,21 +69,17 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int i;
 	void (*functs)();
-	
+
 	va_start(args, format);
 	i = 0;
 	while (format[i] != '\0')
 	{
 		functs = get_op_func(format[i]);
-		
-		functs(va_arg(args, int));
-
-						 
+		functs(va_arg(args, int));	 
 		++i;
+		if (format[i + 1] != '\0')
+			printf(", ");
 	}
-	
-	
 	va_end(args);
-	
 	printf("\n");
 }
