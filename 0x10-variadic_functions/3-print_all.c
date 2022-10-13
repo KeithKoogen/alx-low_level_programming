@@ -4,7 +4,7 @@
 typedef struct funs
 {
 	char s;
-	(*funct)();
+	void (*funct)();
 
 }fun;
 
