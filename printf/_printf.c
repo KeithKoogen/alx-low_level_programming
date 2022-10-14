@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include "_putchar.c"
 
 void print_char(va_list *ptr)
 {
