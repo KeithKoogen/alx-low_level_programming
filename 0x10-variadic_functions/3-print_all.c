@@ -1,12 +1,8 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include "variadic_functions.h"
 
-typedef struct funs
-{
-	char s;
-	void (*funct)();
 
-}fun;
 
 va_list args;
 
