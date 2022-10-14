@@ -32,7 +32,17 @@ void print_integer(va_list *ptr)
 	}
 	else if (i < 0)
 	{
+		if (i > -10)
+		{
 		_putchar('-');
+		_putchar(-i + 48);
+			
+		}
+		else
+		{
+			_putchar('-');
+			print_numbers(-i);
+		}
 	}
 	else
 	{
