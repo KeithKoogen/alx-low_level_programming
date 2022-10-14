@@ -31,8 +31,7 @@ void print_string()
 	char *string;
 	string = va_arg(args, char *);
 	
-	if (string != NULL)
-		printf("%s", string);
+	printf("%s", string);
 }
 
 
