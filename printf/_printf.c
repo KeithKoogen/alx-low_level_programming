@@ -26,27 +26,17 @@ void print_integer(va_list *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
-	if (i > 9)
+	if (i > -1)
 	{
 		print_numbers(i);
 	}
-	else if (i < 0)
+	else 
 	{
-		if (i > -10)
-		{
+		
 		_putchar('-');
 		_putchar(-i + 48);
 			
-		}
-		else
-		{
-			_putchar('-');
-			print_numbers(-i);
-		}
-	}
-	else
-	{
-		_putchar(i + 48);
+		
 	}
  
 }
