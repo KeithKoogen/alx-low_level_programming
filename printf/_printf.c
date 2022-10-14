@@ -38,8 +38,14 @@ int _printf(const char *format, ...)
 		while (i < 2)
 		{
 			if (*format == '%')
+			{
 				if (functions[i].symbol == *(format + 1))
 					functions[i].function(ptr);
+					}
+					else
+					{
+					printf("error");
+					}
 			++i;
 		}
 		++format;
