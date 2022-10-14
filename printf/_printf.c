@@ -34,7 +34,7 @@ void print_integer(va_list *ptr)
 	{
 		
 		_putchar('-');
-		_putchar(-i + 48);
+		print_numbers(-i);
 			
 		
 	}
