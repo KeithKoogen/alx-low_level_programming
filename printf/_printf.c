@@ -99,6 +99,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("%i\n", 5);
+    _printf("%i\n", -12345);
     return (0);
 }
