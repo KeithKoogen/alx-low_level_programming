@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 	int i;
   
   va_list args, *ptr;
+	
+	ptr = &args;
   
 	va_start(args, format);
 	while (*format != '\0')
@@ -42,10 +44,7 @@ int _printf(const char *format, ...)
 				if (functions[i].symbol == *(format + 1))
 					functions[i].function(ptr);
 					}
-					else
-					{
-					printf("error");
-					}
+					
 			++i;
 		}
 		++format;
