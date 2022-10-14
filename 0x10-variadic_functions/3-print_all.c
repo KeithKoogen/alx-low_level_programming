@@ -28,7 +28,11 @@ void print_float()
 
 void print_string()
 {
-	printf("%s", va_arg(args, char *));
+	char *string;
+	string = va_arg(args, char *);
+	
+	if (string != NULL)
+		printf("%s", string);
 }
 
 
