@@ -53,10 +53,10 @@ void print_all(const char * const format, ...)
 	ptr = &args;
 	while (format[i] != '\0')
 	{
-		
+
 	j = 0;
 
-	while (j < 4)
+		while (j < 4)
 		{
 			if (ops[j].s == format[i])
 			{
