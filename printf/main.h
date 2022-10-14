@@ -7,4 +7,6 @@ typedef struct function_brain
 	void (*function)();
 }function;
 
+int _putchar(char c);
+
 #endif
