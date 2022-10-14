@@ -4,28 +4,28 @@
 
 
 
-va_list args;
 
-void print_int()
+
+void print_int(va_list *ptr)
 {
 
-	printf("%d", va_arg(args, int));
+	printf("%d", va_arg(*ptr, int));
 }
 
-void print_char()
+void print_char(va_list *ptr)
 {
-	printf("%c", va_arg(args, int));
+	printf("%c", va_arg(*ptr, int));
 }
 
-void print_float()
+void print_float(va_list *ptr)
 {
-	printf("%f", va_arg(args, double));
+	printf("%f", va_arg(*ptr, double));
 }
 
-void print_string()
+void print_string(va_list *ptr)
 {
 	char *string;
-	string = va_arg(args, char *);
+	string = va_arg(*ptr, char *);
 	
 	printf("%s", string);
 }
@@ -41,6 +41,7 @@ void print_string()
 void print_all(const char * const format, ...)
 {
 	int i, j;
+	va_list args, *ptr;
 
 	fun ops[] = {
 	{'i', print_int},
@@ -51,6 +52,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	i = 0;
+	ptr = &args;
 	while (format[i] != '\0')
 	{
 		
@@ -60,7 +62,7 @@ void print_all(const char * const format, ...)
 		{
 			if (ops[j].s == format[i])
 			{
-				ops[j].funct();
+				ops[j].funct(ptr);
 				if (format[i + 1] != '\0')
 					printf(", ");
 			}
