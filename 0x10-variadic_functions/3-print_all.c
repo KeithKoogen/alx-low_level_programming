@@ -45,7 +45,7 @@ void print_string()
 void print_all(const char * const format, ...)
 {
 	int i, j;
-	void (*functs)();
+
 	fun ops[] = {
 	{'i', print_int},
 	{'c', print_char},
@@ -64,8 +64,7 @@ void print_all(const char * const format, ...)
 		{
 			if (ops[j].s == format[i])
 			{
-				functs = ops[j].funct;
-				functs();
+				ops[j].funct();
 			}
 
 			++j;
