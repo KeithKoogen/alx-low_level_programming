@@ -7,6 +7,7 @@ void print_numbers(int n)
 {
 	if (n < 10)
 	{
+		_putchar(n + 48);
 		return;
 	}
 	print_numbers(n/10);
@@ -98,6 +99,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("%i", 55);
+    _printf("%i", 1234);
     return (0);
 }
