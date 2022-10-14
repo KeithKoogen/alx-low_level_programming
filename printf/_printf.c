@@ -75,6 +75,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("%i", 5);
+    _printf("%i", 55);
     return (0);
 }
