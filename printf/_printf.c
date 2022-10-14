@@ -27,7 +27,7 @@ void print_integer(va_list *ptr)
   i = va_arg(*ptr, int);
 	if (i > 9)
 	{
-		
+		print_numbers(i);
 	}
 	else if (i < 0)
 	{
