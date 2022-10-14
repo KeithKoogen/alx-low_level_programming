@@ -64,6 +64,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("hello");
+    _printf("hello%c",'\n');
     return (0);
 }
