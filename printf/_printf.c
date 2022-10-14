@@ -31,7 +31,7 @@ void print_integer(va_list *ptr)
 	}
 	else if (i < 0)
 	{
-		_putchar('-')
+		_putchar('-');
 	}
 	else
 	{
