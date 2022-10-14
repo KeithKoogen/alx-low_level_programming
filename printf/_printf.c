@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 		{
 			if (*format == '%')
 				if (functions[i].symbol == *(format + 1))
-					functions.function(ptr);
+					functions[i].function(ptr);
 			++i;
 		}
 		++format;
