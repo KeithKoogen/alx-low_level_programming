@@ -32,7 +32,8 @@ int _printf(const char *format, ...)
 {
   function functions[] = {
     {'c', print_char},
-    {'s', print_string}
+    {'s', print_string},
+    {'i', print_integer}
   };
 	int i;
   
@@ -50,7 +51,7 @@ int _printf(const char *format, ...)
 		else
 		{
 		i = 0;
-		while (i < 2)
+		while (i < 3)
 		{
 			
 				if (functions[i].symbol == *(format + 1))
@@ -74,6 +75,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("hello%c",'\n');
+    _printf("%i",5);
     return (0);
 }
