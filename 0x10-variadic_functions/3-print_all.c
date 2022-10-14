@@ -33,31 +33,6 @@ void print_string(char *s)
 
 
 
-void (*get_op_func(char s))()
-{
-	fun ops[] = {
-	{'i', print_int, "int"},
-	{'c', print_char, "int"},
-	{'f', print_float, "double"},
-	{'s', print_string, "char *"},
-	};
-	int i;
-
-	i = 0;
-
-	while (i < 4)
-	{
-	if (ops[i].s == s)
-	{
-		return (ops[i].funct);
-	}
-
-	++i;
-	}
-
-	return (NULL);
-}
-
 
 /**
 * print_all - prints anything
@@ -67,16 +42,38 @@ void (*get_op_func(char s))()
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i;
+	int i, j;
 	void (*functs)();
+	fun ops[] = {
+	{'i', print_int, "int"},
+	{'c', print_char, "int"},
+	{'f', print_float, "double"},
+	{'s', print_string, "char *"},
+	};
 
 	va_start(args, format);
 	i = 0;
 	while (format[i] != '\0')
 	{
-		functs = get_op_func(format[i]);
-		functs(va_arg(args, int));	 
+		
+	j = 0;
+
+	while (j < 4)
+		{
+			if (ops[j].s == format[i])
+			{
+				functs = ops[j].funct;
+				functs(va_arg(args, ops[j].type));
+			}
+
+			++j;
+		}
+
+		
+ 
 		++i;
+		
+		
 		if (format[i + 1] != '\0')
 			printf(", ");
 	}
