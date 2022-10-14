@@ -5,7 +5,7 @@ typedef struct funs
 {
 	char s;
 	void (*funct)();
-	char *type;
+	type type;
 
 }fun;
 
