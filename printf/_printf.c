@@ -48,3 +48,10 @@ int _printf(const char *format, ...)
   
 
 }
+
+
+int main(void)
+{
+    _printf("%c", 98);
+    return (0);
+}
