@@ -2,26 +2,38 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-
-
-
-
+/**
+* print_int - prints an in
+* @ptr: a pointer
+*/
 void print_int(va_list *ptr)
 {
 
 	printf("%d", va_arg(*ptr, int));
 }
 
+/**
+* print_char - prints an in
+* @ptr: a pointer
+*/
 void print_char(va_list *ptr)
 {
 	printf("%c", va_arg(*ptr, int));
 }
 
+/**
+* print_float - prints an in
+* @ptr: a pointer
+*/
 void print_float(va_list *ptr)
 {
 	printf("%f", va_arg(*ptr, double));
 }
 
+/**
+* print_string - prints an in
+* @ptr: a pointer
+*/
 void print_string(va_list *ptr)
 {
 	char *string;
