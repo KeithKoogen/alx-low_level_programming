@@ -10,6 +10,13 @@ void print_char(va_list *ptr)
  _putchar(i);
 }
 
+void print_integer(va_list *ptr)
+{
+  int i;
+  i = va_arg(*ptr, int);
+ _putchar(i + 48);
+}
+
 void print_string(va_list *ptr)
 {
   char *str;
