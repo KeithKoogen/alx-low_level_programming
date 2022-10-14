@@ -5,30 +5,30 @@ typedef struct funs
 {
 	char s;
 	void (*funct)();
-	type type;
 
 }fun;
 
+va_list args;
 
-void print_int(int n)
+void print_int()
 {
 
-	printf("%d", n);
+	printf("%d", va_arg(args, int));
 }
 
-void print_char(int n)
+void print_char()
 {
-	printf("%c", n);
+	printf("%c", va_arg(args, int));
 }
 
-void print_float(double n)
+void print_float()
 {
-	printf("%f", n);
+	printf("%f", va_arg(args, double));
 }
 
-void print_string(char *s)
+void print_string()
 {
-	printf("%s", s);
+	printf("%s", va_arg(args, char *));
 }
 
 
@@ -41,14 +41,13 @@ void print_string(char *s)
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
 	int i, j;
 	void (*functs)();
 	fun ops[] = {
-	{'i', print_int, "int"},
-	{'c', print_char, "int"},
-	{'f', print_float, "double"},
-	{'s', print_string, "char *"},
+	{'i', print_int},
+	{'c', print_char},
+	{'f', print_float},
+	{'s', print_string},
 	};
 
 	va_start(args, format);
@@ -63,7 +62,7 @@ void print_all(const char * const format, ...)
 			if (ops[j].s == format[i])
 			{
 				functs = ops[j].funct;
-				functs(va_arg(args, ops[j].type));
+				functs();
 			}
 
 			++j;
