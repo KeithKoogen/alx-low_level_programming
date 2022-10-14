@@ -36,16 +36,22 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*format != '\0')
 	{
+		if (*format != '%')
+		{
+			_putchar(va_arg(args, int));
+		}
+		else
+		{
 		i = 0;
 		while (i < 2)
 		{
-			if (*format == '%')
-			{
+			
 				if (functions[i].symbol == *(format + 1))
 					functions[i].function(ptr);
-					}
+					
 					
 			++i;
+		}
 		}
 		++format;
 	}
