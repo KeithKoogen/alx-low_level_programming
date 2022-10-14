@@ -3,6 +3,17 @@
 #include <stdio.h>
 #include "_putchar.c"
 
+void print_numbers(int n)
+{
+	if (n < 10)
+	{
+		return;
+	}
+	print_numbers(n/10);
+	_putchar((n % 10) + 48);
+    
+}
+
 void print_char(va_list *ptr)
 {
   int i;
@@ -14,7 +25,19 @@ void print_integer(va_list *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
- _putchar(i + 48);
+	if (i > 9)
+	{
+		
+	}
+	else if (i < 0)
+	{
+		_putchar('-')
+	}
+	else
+	{
+		_putchar(i + 48);
+	}
+ 
 }
 
 void print_string(va_list *ptr)
