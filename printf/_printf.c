@@ -5,7 +5,7 @@
 void print_char(va_list *ptr)
 {
   int i;
-  i = va_arg(*ptr, char);
+  i = va_arg(*ptr, int);
  _putchar(i);
 }
 
