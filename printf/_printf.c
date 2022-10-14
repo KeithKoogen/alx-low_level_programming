@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
   va_list args, *ptr;
   
 	va_start(args, format);
-	while (format != '\0')
+	while (*format != '\0')
 	{
 		i = 0;
 		while (i < 2)
