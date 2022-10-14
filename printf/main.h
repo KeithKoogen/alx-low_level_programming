@@ -5,6 +5,6 @@ typedef struct function_brain
 {
 	char symbol;
 	void (*function)();
-}
+}function;
 
 #endif
