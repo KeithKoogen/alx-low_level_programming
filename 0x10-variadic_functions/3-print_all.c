@@ -13,17 +13,17 @@ va_list args;
 void print_int()
 {
 
-	printf("%d", va_arg(args, int));
+	printf("%d, ", va_arg(args, int));
 }
 
 void print_char()
 {
-	printf("%c", va_arg(args, int));
+	printf("%c, ", va_arg(args, int));
 }
 
 void print_float()
 {
-	printf("%f", va_arg(args, double));
+	printf("%f, ", va_arg(args, double));
 }
 
 void print_string()
@@ -31,7 +31,7 @@ void print_string()
 	char *string;
 	string = va_arg(args, char *);
 	
-	printf("%s", string);
+	printf("%s, ", string);
 }
 
 
@@ -75,8 +75,7 @@ void print_all(const char * const format, ...)
 		++i;
 		
 		
-		if (format[i + 1] != '\0')
-			printf(", ");
+
 	}
 	va_end(args);
 	printf("\n");
