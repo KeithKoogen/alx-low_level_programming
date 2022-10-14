@@ -57,7 +57,8 @@ int _printf(const char *format, ...)
   function functions[] = {
     {'c', print_char},
     {'s', print_string},
-    {'i', print_integer}
+    {'i', print_integer},
+	{'d', print_integer}
   };
 	int i;
   
@@ -75,7 +76,7 @@ int _printf(const char *format, ...)
 		else
 		{
 		i = 0;
-		while (i < 3)
+		while (i < 4)
 		{
 			
 				if (functions[i].symbol == *(format + 1))
