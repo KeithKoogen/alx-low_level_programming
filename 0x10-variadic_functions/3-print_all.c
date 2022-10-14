@@ -25,13 +25,11 @@ void print_float(va_list *ptr)
 void print_string(va_list *ptr)
 {
 	char *string;
+
 	string = va_arg(*ptr, char *);
-	
+
 	printf("%s", string);
 }
-
-
-
 
 /**
 * print_all - prints anything
@@ -70,13 +68,11 @@ void print_all(const char * const format, ...)
 			++j;
 		}
 
-		
- 
 		++i;
-		
-		
 
 	}
+
 	va_end(args);
 	printf("\n");
+
 }
