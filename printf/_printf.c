@@ -53,6 +53,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-    _printf("sss");
+    _printf("%s");
     return (0);
 }
