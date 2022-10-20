@@ -13,22 +13,22 @@ size_t print_list(const list_t *h)
 
 	i = 0;
 
-	while (n != NULL)
+	while (h != NULL)
 	{
 		++i;
 		
-		if (n->len < 10)
+		if (h->len < 10)
 		{
 			_putchar('[');
-			_putchar((n->len) + 48);
+			_putchar((h->len) + 48);
 			_putchar(']');
 		}
-		if (n->str != NULL)
+		if (h->str != NULL)
 		{
 			j = 0;
-			while (str[j] != '\0')
+			while (h->str[j] != '\0')
 			{
-				_putchar(j);
+				_putchar(h->str[j]);
 			}
 		}
 		else
@@ -40,7 +40,7 @@ size_t print_list(const list_t *h)
 			_putchar(')');
 		}
 
-		n = n->next;
+		h = h->next;
 	}
 
 	return (i);
