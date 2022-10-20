@@ -9,7 +9,6 @@
 size_t print_list(const list_t *h)
 {
 	size_t i;
-	int j;
 
 	i = 0;
 
@@ -19,26 +18,17 @@ size_t print_list(const list_t *h)
 		
 		if (h->len < 10)
 		{
-			_putchar('[');
-			_putchar((h->len) + 48);
-			_putchar(']');
-			_putchar(' ');
+			printf("[%d] ", h->len);
+
 		}
 		if (h->str != NULL)
 		{
-			j = 0;
-			while (h->str[j] != '\0')
-			{
-				_putchar(h->str[j]);
-			}
+			printf("%s",h->str);
+
 		}
 		else
 		{
-			_putchar('(');
-			_putchar('n');
-			_putchar('i');
-			_putchar('l');
-			_putchar(')');
+			printf("(nil)");
 		}
 
 		h = h->next;
