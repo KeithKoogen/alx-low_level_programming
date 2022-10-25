@@ -2,8 +2,6 @@
 
 void reverse(listint_t *head, listint_t *tmp)
 {
-	listint_t *ptr;
-
 	if (head->next == NULL)
 		return;
 
