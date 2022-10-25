@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void reverse(listint_t *head, *tmp)
+void reverse(listint_t *head, listint_t *tmp)
 {
 	listint_t *ptr;
 
