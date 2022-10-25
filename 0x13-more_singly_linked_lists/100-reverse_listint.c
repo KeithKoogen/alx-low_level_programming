@@ -1,12 +1,14 @@
 #include "lists.h"
 
-int reverse(listint_t *head)
+void reverse(listint_t *head)
 {
+	listint_t *ptr;
+	
 	if (head->next == NULL)
-		return (head->n);
-	
-	head->n = reverse(head->next);
-	
+		return;
+	ptr = head;
+	reverse(head->next);
+	ptr->n = head->n;
 }
 
 /**
@@ -18,4 +20,5 @@ int reverse(listint_t *head)
 listint_t *reverse_listint(listint_t **head)
 {
 	reverse(*head);
+	return (*head);
 }
