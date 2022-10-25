@@ -6,7 +6,8 @@ void reverse(listint_t *head, listint_t *tmp)
 		return;
 
 	reverse(head->next, tmp);
-	tmp = head;
+	head = tmp->next;
+	tmp = tmp->next;
 
 }
 
