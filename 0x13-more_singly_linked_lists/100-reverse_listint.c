@@ -6,7 +6,7 @@ listint_t *reverse(listint_t *head, listint_t *tmp)
 		return(head);
 
 	tmp = reverse(head->next, tmp);
-	
+
 	return (tmp);
 
 }
@@ -20,9 +20,9 @@ listint_t *reverse(listint_t *head, listint_t *tmp)
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *tmp;
-	
+
 	tmp = *head;
-	
+
 	reverse(*head, tmp);
 	return (*head);
 }
