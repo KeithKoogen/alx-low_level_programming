@@ -8,7 +8,14 @@
 
 int sum_listint(listint_t *head)
 {
-	if (head->next != NULL)
+	if (head != NULL)
+	{
 		return (head->n + sum_listint(head->next));
+	}
+	else
+	{
+		return (0);
+	}
+		
 
 }
