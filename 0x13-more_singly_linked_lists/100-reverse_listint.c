@@ -1,13 +1,13 @@
 #include "lists.h"
 
-void reverse(listint_t *head, listint_t *tmp)
+listint_t *reverse(listint_t *head, listint_t *tmp)
 {
 	if (head->next == NULL)
-		return;
+		return(head);
 
-	reverse(head->next, tmp);
-	head = tmp->next;
-	tmp = tmp->next;
+	tmp = reverse(head->next, tmp);
+	
+	return (tmp);
 
 }
 
