@@ -3,7 +3,7 @@
 /**
 * flip_bits - counts the number of bits to flip from one number to another
 * @n: the number
-* @n: the number to flip
+* @m: the number to flip
 * Return: Number of bits as an int
 */
 
