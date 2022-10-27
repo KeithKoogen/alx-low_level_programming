@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (k = i; k > 0; k--)
 	{
-		_putchar(b[k]);
+		printf(b[k]);
 	
 	}
 
