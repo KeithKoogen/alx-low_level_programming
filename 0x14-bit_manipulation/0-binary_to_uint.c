@@ -19,9 +19,9 @@ unsigned int binary_to_uint(const char *b)
 	k = 0;
 	digit = 0;
 
-	for (k = i; k > -1; k--)
+	for (k = i + 1; k > 0; k--)
 	{
-		printf("%c", b[k]);
+		printf("%c", b[k - 1]);
 	
 	}
 
