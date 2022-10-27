@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	digit = 0;
 	j = 1;
 
-	for (k = i, k > 0, k--)
+	for (k = i; k > 0; k--)
 	{
 		if (b[k] < 48 || b[k] > 49)
 			return (0);
