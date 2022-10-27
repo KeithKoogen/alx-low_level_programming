@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, digit, j;
+	unsigned int i, digit, j, k;
 
 	if (b == NULL)
 		return (0);
@@ -18,11 +18,14 @@ unsigned int binary_to_uint(const char *b)
 	i = strlen(b);
 	digit = 0;
 	j = 1;
-
-	j = i;
-	printf("%d", i);
 	
-	printf("%c", b[j - 1]);
+	for (k = i - 1; k > 0; k--)
+	{
+		digit = digit + (b[k] * j);
+		
+		j = j * 2;
+	}
+
 
 	return (digit);
 
