@@ -19,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 	k = 0;
 	digit = 0;
 
-	for (k = 0; k < i; --k)
+	for (k = 0; k < i; k++)
 	{
 		printf("%c", b[k]);
 	
