@@ -22,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] < 48 || b[i] > 49)
 			return (0);
 
-		digit = (b[i] - 48) * j;
+		digit = digit + ((b[i] - 48) * j);
 
 		j = j * 2;
 		++i;
