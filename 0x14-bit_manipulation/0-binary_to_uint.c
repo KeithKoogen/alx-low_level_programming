@@ -10,13 +10,12 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, digit, k, j;
+	unsigned int i, digit, j;
 
 	if (b == NULL)
 		return (0);
 
 	i = strlen(b);
-	k = 0;
 	digit = 0;
 	j = 1;
 
