@@ -18,7 +18,6 @@ unsigned int binary_to_uint(const char *b)
 	i = strlen(b);
 	k = 0;
 	digit = 0;
-	j = 1;
 
 	for (k = i; k > 0; k--)
 	{
