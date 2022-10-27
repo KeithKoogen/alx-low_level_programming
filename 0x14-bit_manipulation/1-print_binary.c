@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 			{
 				putchar(48);
 			}
-			n >> 1;
+			n = n >> 1;
 			
 		}
 	}
