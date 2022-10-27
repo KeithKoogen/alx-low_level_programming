@@ -16,10 +16,11 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 
 	i = strlen(b);
+	k = 0;
 	digit = 0;
 	j = 1;
 
-	for (k = i - 1; k > 0; k--)
+	for (k = i; k > 0; k--)
 	{
 		if (b[k] < 48 || b[k] > 49)
 			return (0);
