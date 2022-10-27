@@ -21,6 +21,9 @@ unsigned int binary_to_uint(const char *b)
 	
 	for (k = i - 1; k > 0; k--)
 	{
+		if (b[k] < 48 || b[k] > 49)
+			return (0);
+		
 		digit = digit + ((b[k] - 48) * j);
 		
 		j = j * 2;
