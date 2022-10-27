@@ -13,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned long int i;
 	
 	i = *n;
-	i |= 1 << k;
+	i |= 1 << index;
 	
 	return (i);
 	
