@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, digit, k;
+	unsigned int i, digit, k, j;
 
 	if (b == NULL)
 		return (0);
@@ -18,10 +18,16 @@ unsigned int binary_to_uint(const char *b)
 	i = strlen(b);
 	k = 0;
 	digit = 0;
+	j = 1;
 
 	for (k = i + 1; k > 0; k--)
 	{
-		printf("%c", b[k - 1]);
+				if (b[k - 1] < 48 || b[k - 1] > 49)
+			return (0);
+
+		digit = digit + ((b[k - 1] - 48) * j);
+
+		j = j * 2;
 	
 	}
 
