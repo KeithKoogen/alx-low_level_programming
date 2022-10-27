@@ -25,6 +25,8 @@ unsigned int binary_to_uint(const char *b)
 		
 		j = j * 2;
 	}
+	
+	digit = digit + ((b[0] - 48) * j);
 
 
 	return (digit);
