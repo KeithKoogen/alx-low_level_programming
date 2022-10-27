@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 	
 	for (k = i - 1; k > 0; k--)
 	{
-		digit = digit + (b[k] * j);
+		digit = digit + ((b[k] - 48) * j);
 		
 		j = j * 2;
 	}
