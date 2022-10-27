@@ -20,8 +20,9 @@ unsigned int binary_to_uint(const char *b)
 	j = 1;
 
 	j = i;
+	printf("%d", i);
 	
-	printf("%c", b[j]);
+	printf("%c", b[j - 1]);
 
 	return (digit);
 
