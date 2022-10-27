@@ -20,15 +20,9 @@ unsigned int binary_to_uint(const char *b)
 	digit = 0;
 	j = 1;
 
-	for (k = i; b[k] != '\0'; k--)
-	{
-				
-
-		digit = digit + ((b[k - 1] - 48) * j);
-
-		j = j * 2;
+	j = i;
 	
-	}
+	printf("%c", b[j]);
 
 	return (digit);
 
