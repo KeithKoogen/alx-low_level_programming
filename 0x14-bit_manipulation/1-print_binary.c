@@ -25,12 +25,8 @@ void print_binary(unsigned long int n)
 				putchar(48);
 			}
 			n = n >> 1;
-			
+
 		}
 	}
-	
-	_putchar('\n');
 
-	
-	
 }
