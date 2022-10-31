@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, check, check2;
-	char buffer[1024] = 0;
+	char buffer[1024] = {0};
 
 	if (argc != 3)
 	{
