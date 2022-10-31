@@ -36,6 +36,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			break;
 
 		_putchar(buf[0]);
+		
+		if (buf[0] == '\0')
+			break;
 
 		if ((buf[0] > 31 && buf[0] < 127) || buf[0] == '\n')
 			++count;
