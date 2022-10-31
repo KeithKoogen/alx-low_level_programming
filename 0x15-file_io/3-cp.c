@@ -36,7 +36,14 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-	dprintf(file_to,"%s", buffer);
+	check = write(file_to,buffer,sizeof(buffer));
+	if (check < 0)
+	{
+		close(file_to);
+		close(file_from);
+		fprintf(stderr, "Error: Can't write to NAME_OF_THE_FILE");
+		exit(99);
+	}
 
 	close(file_to);
 	close(file_from);
