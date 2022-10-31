@@ -37,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		
 	for (i = 0; i < letters; i++)
 	{
-		if ((buf[i] == 32) || (buf[i] == '\n') || buf[i] == '\0')
+		if (buf[i] > 32 &&buf[i] < 127)
 			++count;
 		
 	}
@@ -48,5 +48,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 
 	
-	return (letters - count);
+	return (count);
 }
