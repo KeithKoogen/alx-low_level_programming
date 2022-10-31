@@ -11,7 +11,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	size_t count;
-	char buf[1];
+	ssize_t valid;
+	char buf[letters];
 	
 	buf[0] = 0;
 	count = 0;
@@ -21,22 +22,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 	fd = open(filename, O_RDONLY);
 	
-	if (fd== -1)
+	if (fd == -1)
 		return (0);
 	
-	while (buf != '\0')
-	{
-		read(fd, buf, 1);
-		_putchar(buf[0]);
-		++count;
+	
+	valid = read(fd, buf, letters);
+	
+	if (valid == -1)
+		return (0);
+	
+	printf("%s", buf);
 		
-		if (count == letters)
-			break;
 
-	}
+
 	
-	if (count != letters)
-		return (0);
 	
-	return (count);
+
+	
+	return (letters);
 }
