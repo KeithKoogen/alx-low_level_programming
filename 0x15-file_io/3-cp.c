@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	while (check != 0)
 	{
 		check = read(file_from, buffer, sizeof(buffer));
-		dprintf(file_to, buffer);
+		dprintf(file_to,"%s", buffer);
 	}
 	
 	return (0);
