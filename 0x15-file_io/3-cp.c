@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	check = read(file_from, buffer, sizeof(buffer));
 	if (check < 0)
 	{
+		close(file_to);
+		close(file_from);
 		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
