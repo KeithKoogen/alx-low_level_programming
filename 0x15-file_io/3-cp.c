@@ -10,7 +10,9 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, check, check2;
-	char buffer[1024];
+	char *buffer;
+	
+	buffer = calloc(1024, 1);
 
 	if (argc != 3)
 	{
@@ -48,6 +50,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	}
+	free(buffer);
 
 	close(file_to);
 	close(file_from);
