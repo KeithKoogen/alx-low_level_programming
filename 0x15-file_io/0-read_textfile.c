@@ -10,19 +10,13 @@ Return: Actual number of letters it could read and print
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	size_t count;
 	ssize_t valid;
 	char *buf;
 	
 	buf = malloc(sizeof(char) * letters);
 	
-	if (buff == NULL)
+	if (buf == NULL || filename == NULL)
 		return (0);
-	
-	count = 0;
-	
-	if (filename == NULL)
-		return(0);
 	
 	fd = open(filename, O_RDONLY);
 	
