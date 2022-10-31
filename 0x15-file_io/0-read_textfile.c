@@ -12,6 +12,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	ssize_t valid;
 	char *buf;
+	size_t i;
+	ssize_t count;
+	
+	count = 0;
 	
 	buf = malloc(sizeof(char) * letters);
 	
@@ -30,6 +34,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	
 	printf("%s", buf);
+	
+	for (i = 0; i < letters; i++)
+	{
+		if ((buf[i] > 64 && buf[i] < 91) || (buf[i] > 96 && buf[i] < 123))
+			++count;
+		
+	}
 		
 
 
@@ -37,5 +48,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 
 	
-	return (letters);
+	return (count);
 }
