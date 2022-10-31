@@ -10,16 +10,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, check;
-	ssize_t valid;
+	ssize_t valid, count;
 	char buf[1];
 	size_t i;
-	ssize_t count;
 
 	count = 0;
-
 	buf[0] = 0;
 
-	if (buf == NULL || filename == NULL)
+	if (filename == NULL)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
@@ -30,25 +28,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0; i < letters; i++)
 	{
 		valid = read(fd, buf, sizeof(char));
-		if (valid == 0)
+		if (valid == 0 || valid == -1)
 			break;
-
-		if (valid == -1)
-			break;
-
 		check = write(1, &buf[0], 1);
-
 		if (check == -1)
 			return (0);
-
 		if (buf[0] == '\0')
 			break;
-
 		if ((buf[0] > 31 && buf[0] < 127) || buf[0] == '\n')
 			++count;
 
 	}
-
-
 	return (count);
 }
