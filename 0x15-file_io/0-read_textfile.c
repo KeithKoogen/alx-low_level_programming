@@ -31,6 +31,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0; i < letters; i++)
 	{
 		valid = read(fd, buf, sizeof(char));
+		if (valid == 0)
+			break;
 		
 		if (valid == -1)
 			break;
