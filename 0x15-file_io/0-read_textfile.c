@@ -11,13 +11,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t valid;
-	char *buf;
+	char buf[1];
 	size_t i;
 	ssize_t count;
 
 	count = 0;
-
-	buf = malloc(sizeof(char) * letters);
 
 	if (buf == NULL || filename == NULL)
 		return (0);
@@ -27,20 +25,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	valid = read(fd, buf, letters);
+	
 
-	if (valid == -1)
-		return (0);
+
 
 	for (i = 0; i < letters; i++)
 	{
-		_putchar(buf[i]);
-		if ((buf[i] > 31 && buf[i] < 127) || buf[i] == '\n')
+		valid = read(fd, buf, 1);
+			if (valid == -1)
+				break;
+		_putchar(buf[0]);
+		if ((buf[0] > 31 && buf[0] < 127) || buf[0] == '\n')
 			++count;
 		
 	}
 
-	free(buf);
 
 	return (count);
 }
