@@ -32,11 +32,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 	if (valid == -1)
 		return (0);
-	
-	printf("%s", buf);
-	
+		
 	for (i = 0; i < letters; i++)
 	{
+		_putchar(buf[i]);
 		if ((buf[i] == 32) || (buf[i] == '\n'))
 			++count;
 		
