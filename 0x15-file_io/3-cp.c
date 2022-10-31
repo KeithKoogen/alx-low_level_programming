@@ -23,7 +23,14 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
 	
 	check = read(file_from, buffer, sizeof(buffer));
+	if (check < 0)
+	{
+		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		exit(98);
+	}
 	dprintf(file_to,"%s", buffer);
 	
+	close(file_to);
+	close(file_from);
 	return (0);
 }
