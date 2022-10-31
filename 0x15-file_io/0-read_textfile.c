@@ -9,7 +9,7 @@ Return: Actual number of letters it could read and print
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd, check;
 	ssize_t valid;
 	char buf[1];
 	size_t i;
@@ -36,7 +36,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (valid == -1)
 			break;
 
-		_putchar(buf[0]);
+		check = _putchar(buf[0]);
+		
+		if (check == -1)
+			return (0);
 		
 		if (buf[0] == '\0')
 			break;
