@@ -14,39 +14,33 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf;
 	size_t i;
 	ssize_t count;
-	
+
 	count = 0;
-	
+
 	buf = malloc(sizeof(char) * letters);
-	
+
 	if (buf == NULL || filename == NULL)
 		return (0);
-	
+
 	fd = open(filename, O_RDONLY);
-	
+
 	if (fd == -1)
 		return (0);
-	
-	
+
 	valid = read(fd, buf, letters);
-	
+
 	if (valid == -1)
 		return (0);
-	
+
 	printf("%s", buf);
-		
+
 	for (i = 0; i < letters; i++)
 	{
+		_putchar(buf[i]);
 		if ((buf[i] > 31 && buf[i] < 127) || buf[i] == '\n')
 			++count;
 		
 	}
-		
 
-
-	
-	
-
-	
 	return (count);
 }
