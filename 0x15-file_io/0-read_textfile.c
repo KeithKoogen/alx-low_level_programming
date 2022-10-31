@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (valid == -1)
 			break;
 
-		check = _putchar(buf[0]);
+		check = write(1, &buf[0], 1);
 		
 		if (check == -1)
 			return (0);
