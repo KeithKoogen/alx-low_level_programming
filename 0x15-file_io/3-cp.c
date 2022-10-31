@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-	
+
 	check = read(file_from, buffer, sizeof(buffer));
 	if (check < 0)
 	{
@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-		
 
 	check2 = dprintf(file_to, "%s", buffer);
 	if (check2 < 0)
