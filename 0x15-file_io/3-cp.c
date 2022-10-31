@@ -10,9 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, check, check2;
-	char *buffer;
-	
-	buffer = calloc(1024, 1);
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -35,7 +33,6 @@ int main(int argc, char *argv[])
 	{
 		close(file_to);
 		close(file_from);
-		free(buffer);
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
@@ -46,12 +43,9 @@ int main(int argc, char *argv[])
 	{
 		close(file_to);
 		close(file_from);
-		free(buffer);
 		fprintf(stderr, "Error: Can't write to NAME_OF_THE_FILE");
 		exit(99);
 	}
-		
-	free(buffer);
 	close(file_to);
 	close(file_from);
 	return (0);
