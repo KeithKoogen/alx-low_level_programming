@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 
 /*
 read_textfile - Reads and prints a text file
