@@ -10,7 +10,7 @@ Return: Actual number of letters it could read and print
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t count;
+	size_t count;
 	char buf[1];
 	
 	buf[0] = 0;
