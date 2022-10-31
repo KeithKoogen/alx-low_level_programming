@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf(stderr, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (file_from < 0)
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
 
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	{
 		close(file_to);
 		close(file_from);
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
 	dprintf(file_to,"%s", buffer);
