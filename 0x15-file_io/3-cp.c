@@ -45,7 +45,12 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't write to NAME_OF_THE_FILE");
 		exit(99);
 	}
-	close(file_to);
-	close(file_from);
+	check = close(file_to);
+	check2 = close(file_from);
+	if (check < 0 || check2 < 0)
+	{
+		fprintf(stderr, "Error: Can't close fd FD_VALUE");
+		exit(100);
+	}
 	return (0);
 }
