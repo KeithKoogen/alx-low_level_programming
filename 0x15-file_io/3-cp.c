@@ -22,11 +22,8 @@ int main(int argc, char *argv[])
 	
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
 	
-	while (check != 0)
-	{
-		check = read(file_from, buffer, sizeof(buffer));
-		dprintf(file_to,"%s", buffer);
-	}
+	check = read(file_from, buffer, sizeof(buffer));
+	dprintf(file_to,"%s", buffer);
 	
 	return (0);
 }
