@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	}
 		
 
-	check2 = write(file_to, buffer, sizeof(buffer));
+	check2 = dprintf(file_to, "%s", buffer);
 	if (check2 < 0)
 	{
 		close(file_to);
