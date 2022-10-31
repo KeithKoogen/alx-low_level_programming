@@ -30,14 +30,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	
-	while (check != 0)
-	{
-
 	check = read(file_from, buffer, 1024);
 	if (check < 0)
 	{
 		close(file_to);
 		close(file_from);
+		free(buffer);
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
@@ -48,14 +46,12 @@ int main(int argc, char *argv[])
 	{
 		close(file_to);
 		close(file_from);
+		free(buffer);
 		fprintf(stderr, "Error: Can't write to NAME_OF_THE_FILE");
 		exit(99);
 	}
-		if (check < 1024)
-			break;
-	}
+		
 	free(buffer);
-
 	close(file_to);
 	close(file_from);
 	return (0);
