@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, check;
-	char buffer;
+	char buffer[1024];
 	
 	file_from = open(argv[1], O_RDONLY);
 	
