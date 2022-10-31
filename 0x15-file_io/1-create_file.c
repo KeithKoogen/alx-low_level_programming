@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	else
 	{
 		close(fd);
-		fd = open(filename, O_CREAT | O_WRONLY | O_APPEND, 0600);
+		fd = open(filename, O_CREAT | O_WRONLY | O_APPEND, 600);
 	}
 	
 	if (fd == -1)
