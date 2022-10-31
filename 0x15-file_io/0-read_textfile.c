@@ -18,6 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	count = 0;
 	wrt = 0;
+	buf[0] = 0;
 
 	if (buf == NULL || filename == NULL)
 		return (0);
@@ -29,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; i < letters; i++)
 	{
-		valid = read(fd, buf, 1);
+		valid = read(fd, buf, sizeof(char));
 			if (valid == -1)
 				break;
 		wrt = _putchar(buf[0]);
