@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	
-	check = read(file_from, buffer, 1024);
+	check = read(file_from, buffer, sizeof(buffer));
 	if (check < 0)
 	{
 		close(file_to);
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	}
 		
 
-	check2 = write(file_to, buffer, 1024);
+	check2 = write(file_to, buffer, sizeof(buffer));
 	if (check2 < 0)
 	{
 		close(file_to);
