@@ -22,6 +22,12 @@ int main(int argc, char *argv[])
 	
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
 	
+	if (file_from < 0)
+	{
+		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		exit(98);
+	}
+	
 	check = read(file_from, buffer, sizeof(buffer));
 	if (check < 0)
 	{
