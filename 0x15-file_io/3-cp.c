@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	}
 	check = close(file_to);
 	check2 = close(file_from);
-	if (check < 0 || check2 < 0)
+	if (check == -1 || check2 == -1)
 	{
 		fprintf(stderr, "Error: Can't close fd FD_VALUE");
 		exit(100);
