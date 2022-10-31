@@ -25,16 +25,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	
-
-
-
 	for (i = 0; i < letters; i++)
 	{
 		valid = read(fd, buf, 1);
 			if (valid == -1)
 				break;
-		wrt = write(1, buf[0], 1);
+		wrt = write(1, &buf[0], 1);
 		if (wrt == -1)
 			return (0);
 		if ((buf[0] > 31 && buf[0] < 127) || buf[0] == '\n')
