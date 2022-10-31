@@ -28,8 +28,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0; i < letters; i++)
 	{
 		valid = read(fd, buf, sizeof(char));
-		if (valid == 0 || valid == -1)
+		if (valid == 0)
 			break;
+		if (valid == -1)
+			return (0);
 		check = write(1, &buf[0], 1);
 		if (check == -1)
 			return (0);
@@ -37,7 +39,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			break;
 		if ((buf[0] > 31 && buf[0] < 127) || buf[0] == '\n')
 			++count;
-
 	}
 	close(fd);
 	return (count);
