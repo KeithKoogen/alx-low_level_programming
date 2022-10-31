@@ -41,8 +41,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-		if (check < 1024)
-			break;
+		
 
 	check2 = write(file_to, buffer, sizeof(buffer));
 	if (check2 < 0)
@@ -52,6 +51,8 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't write to NAME_OF_THE_FILE");
 		exit(99);
 	}
+		if (check < 1024)
+			break;
 	}
 	free(buffer);
 
