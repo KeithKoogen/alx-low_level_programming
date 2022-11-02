@@ -5,7 +5,11 @@
 char *break_string(char *str, char *delimeter)
 {
 	char *token;
+	
 	token = strtok(str, delimeter);
+	
+	while (token != NULL)
+		token = strtok(str, delimeter);
 	
 	return (token);
 }
