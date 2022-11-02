@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-break_string(char *str, char *delimeter, char **ptr)
+void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
 	int i;
