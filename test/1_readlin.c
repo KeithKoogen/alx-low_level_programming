@@ -2,44 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-void break_string(char *str, char *delimeter, char **ptr)
+char *break_string(char *str, char *delimeter)
 {
 	char *token;
-	int len, i, count;
-	
-	count = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ')
-			++count;
-		++i;
-	}
-	
-	ptr = malloc(sizeof(char *) * count);
 	token = strtok(str, delimeter);
 	
-	while (token != NULL)
-	{
-		len = strlen(token);
-		*ptr = malloc(sizeof(char) * len);
-		strcpy(token, *ptr);
-		
-		token = (str, delimeter);
-		++ptr;
-	}
-	
+	return (token);
 }
 
 
 int main(void)
 {
-  char *buffer;
+  char *buffer, *str;
   size_t size, characters;
-	char **finalstring;
-	int i;
-	
-	i = 0;
+
+
   
   size = 32;
   
@@ -55,15 +32,14 @@ int main(void)
 	
 	
 printf("before break string function");
-	break_string(buffer, " ", finalstring);
+	str = break_string(buffer, " ");
 	
 	
-	while (finalstring[i] != NULL)
-	{
+
   
-  printf("%s\n", finalstring[i]);
-		++i;
-	}
+  printf("%s\n", str);
+
+
 	
   
   return (0);
