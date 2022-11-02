@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 
+int count_args(char *str, char *delimeter)
+{
+	int count;
+	count = 0;
+	
+	token = strtok(str, delimeter);
+	while (token != NULL)
+	{
+		++count;
+		token = strtok(NULL, " ");
+	}
+	
+	return (count);
+}
+
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
@@ -26,7 +41,7 @@ int main(void)
 {
   char *buffer, **str;
   size_t size, characters;
-	int i;
+	int i, count;
 	
 	i = 0;
 
@@ -42,9 +57,10 @@ int main(void)
   printf("$ ");  
   characters = getline(&buffer, &size, stdin);
   } while (characters == 1);
+
+	count = count_args(buffer, " ", str);
 	
-	
-str = malloc(sizeof(char *) * 3);	
+str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
 	
 	while (str[i] != NULL)
