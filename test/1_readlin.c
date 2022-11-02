@@ -43,9 +43,11 @@ int main(void)
   printf("$ ");  
   characters = getline(&buffer, &size, stdin);
   }
+	
+		finalstring = malloc(sizeof(char *) * size);
   while (characters == 1);
 	
-	finalstring = malloc(sizeof(char *) * size);
+
 	
 	break_string(buffer, " ", finalstring);
 	
