@@ -83,13 +83,15 @@ break_string(buffer, " ", str);
 	for (i = 0; i < 3; i++)
 	{
 		fork();
+		execve(str[0], str, NULL);
+		wait(&status);
 		child_pid = getpid();
 		printf("child pid %d\n", child_pid);
 		
-		execve(str[0], str, NULL);
 		
 		
-		wait(&status);
+		
+		
 		
 	}
 
