@@ -84,7 +84,7 @@ break_string(buffer, " ", str);
 	{
 		fork();
 		execve(str[0], str, NULL);
-		wait(&status);
+		
 		child_pid = getpid();
 		printf("child pid %d\n", child_pid);
 		
