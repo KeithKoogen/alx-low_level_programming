@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main (int argc, char *argv[])
 {
@@ -8,7 +10,7 @@ int main (int argc, char *argv[])
 	i = atoi(argv[1]);
 	k = atoi(argv[2]);
 	
-	printf("your sum is: %d\n");
+	printf("your sum is: %d\n", i + k);
 	
 	return (0);
 }
