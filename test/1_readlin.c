@@ -37,7 +37,6 @@ void break_string(char *str, char *delimeter, char **ptr)
 	{
 		ptr[i] = malloc(sizeof(char) * strlen(token + 1));
 		strcpy(ptr[i], token);
-		printf("from function: %s\n", token);
 		token = strtok(NULL, " ");
 		++i;
 	}
@@ -70,14 +69,15 @@ int main(void)
 	count = count_args(buffer, " ");
 	
 str = malloc(sizeof(char *) * count);	
+		printf("%d\n", count);
 break_string(buffer, " ", str);
 	
 	while (str[i] != NULL)
 	{
-		printf("%s\n", str[i]);
+		printf("last while loop: %s\n", str[i]);
 		++i;
 	}
-	printf("%d\n", count);
+
 
 		
 	
