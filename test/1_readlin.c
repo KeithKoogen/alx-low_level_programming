@@ -70,6 +70,7 @@ break_string(buffer, " ", str);
 		printf("%s\n", str[i]);
 		++i;
 	}
+	printf("%d\n", count);
 
 		
 	
