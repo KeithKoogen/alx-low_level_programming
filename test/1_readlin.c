@@ -79,7 +79,7 @@ break_string(buffer, " ", str);
 	printf("Parent Pid = %d\n", parent_pid);
 	
 	fork();
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 2; i++)
 	{
 		if (fork() == 0)
 		{
