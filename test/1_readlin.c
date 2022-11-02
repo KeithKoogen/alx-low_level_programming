@@ -4,18 +4,23 @@
 
 unsigned int count_args(char *str, char *delimeter)
 {
-	int count;
+	unsigned int count;
+	char *buffer;
 	char *token;
 	
+	buffer = malloc(sizeof(str));
+	strcpy(buffer, str);
+
 	count = 0;
 	
-	token = strtok(str, delimeter);
+	token = strtok(buffer, delimeter);
+
 	while (token != NULL)
 	{
 		++count;
 		token = strtok(NULL, " ");
 	}
-	
+	free(buffer);
 	return (count);
 }
 
