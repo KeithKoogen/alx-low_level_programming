@@ -70,7 +70,6 @@ int main(void)
 	count = count_args(buffer, " ");
 	
 str = malloc(sizeof(char *) * count);	
-		printf("%d\n", count);
 break_string(buffer, " ", str);
 	
 	execve(str[0], str, NULL);
