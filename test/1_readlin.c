@@ -73,13 +73,13 @@ int main(void)
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
 	parent_pid = getpid();
-	printf("Parent Pid = %d\n");
+	printf("Parent Pid = %d\n", parent_pid);
 	
 	for (i = 0; i < 5; i++)
 	{
 		child_pid = fork();
 		child_pid = getpid();
-		printf("Child Pid = %d\n");
+		printf("Child Pid = %d\n", child_pid);
 	execve(str[0], str, NULL);
 		wait(&status);
 		
