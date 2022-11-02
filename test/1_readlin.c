@@ -82,7 +82,7 @@ break_string(buffer, " ", str);
 	
 	for (i = 0; i < 3; i++)
 	{
-		fork();
+		child_pid = fork();
 		execve(str[0], str, NULL);
 		
 		child_pid = getpid();
