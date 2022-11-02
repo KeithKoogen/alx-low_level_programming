@@ -11,9 +11,12 @@ int main(void)
   
   buffer = malloc(sizeof(char) * size);
   
-  printf("$ ");
-  
+  do 
+  {  
+  printf("$ ");  
   characters = getline(&buffer, &size, stdin);
+  }
+  while (characters == 0);
   
   printf("%s\n", buffer);
   
