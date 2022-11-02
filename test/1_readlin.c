@@ -10,7 +10,7 @@ unsigned int count_args(char *str, char *delimeter)
 	unsigned int count;
 	char *buffer;
 	char *token;
-	pid_t child_pid;
+	
 	
 	
 	buffer = malloc(sizeof(str));
@@ -55,6 +55,7 @@ int main(void)
   size_t size, characters;
 	int i, status;
 	unsigned int count;
+	pid_t child_pid;
 
 	
 	i = 0;
