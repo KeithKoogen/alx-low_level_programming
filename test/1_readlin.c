@@ -9,7 +9,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	
 	count = 0;
 	i = 0;
-	while (str[i] != NULL)
+	while (str[i] != '\0')
 	{
 		if (str[i] == ' ')
 			++count;
