@@ -16,7 +16,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 		++i;
 	}
 	
-	ptr = malloc(sizeof(char **) * count);
+	ptr = malloc(sizeof(char *) * count);
 	token = strtok(str, delimeter);
 	
 	while (token != NULL)
@@ -58,7 +58,12 @@ printf("before break string function");
 	break_string(buffer, " ", finalstring);
 	
 	
-
+	while (finalstring[i] != NULL)
+	{
+  
+  printf("%s\n", finalstring[i]);
+		++i;
+	}
 	
   
   return (0);
