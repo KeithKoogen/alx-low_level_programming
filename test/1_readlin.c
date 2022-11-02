@@ -18,7 +18,7 @@ int main(void)
   }
   while (characters == 0);
   
-  printf("%s\n%u\n", buffer);
+  printf("%s\n%zu\n", buffer);
   
   return (0);
   
