@@ -56,15 +56,7 @@ int main(void)
 	
 printf("before break string function");
 	
-	break_string(buffer, " ", finalstring);
 	
-	
-	while (finalstring[i] != NULL)
-	{
-  
-  printf("%s\n", finalstring[i]);
-		++i;
-	}
   
   return (0);
   
