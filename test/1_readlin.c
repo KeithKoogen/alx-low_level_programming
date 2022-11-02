@@ -78,7 +78,7 @@ break_string(buffer, " ", str);
 
 	
 	
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if (fork() == 0)
 		{
