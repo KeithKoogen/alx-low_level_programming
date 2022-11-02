@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 int main(void)
 {
@@ -9,7 +9,7 @@ int main(void)
   size = 32;
   
   
-  buffer = malloc(sizeof(char) * size));
+  buffer = malloc(sizeof(char) * size);
   
   printf("$ ");
   
