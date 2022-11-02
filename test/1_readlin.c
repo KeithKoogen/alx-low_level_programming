@@ -13,7 +13,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	
 	while (token != NULL)
 	{
-		ptr[i] = token;
+		strcpy(token, ptr[i]);
 		
 		token = (str, delimeter);
 		++i;
