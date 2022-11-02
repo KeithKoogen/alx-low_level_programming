@@ -10,6 +10,7 @@ unsigned int count_args(char *str, char *delimeter)
 	unsigned int count;
 	char *buffer;
 	char *token;
+	int status;
 	
 	buffer = malloc(sizeof(str));
 	strcpy(buffer, str);
