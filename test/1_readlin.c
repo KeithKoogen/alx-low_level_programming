@@ -78,9 +78,10 @@ break_string(buffer, " ", str);
 	parent_pid = getpid();
 	printf("Parent Pid = %d\n", parent_pid);
 	
+	fork();
 	for (i = 0; i < 5; i++)
 	{
-		child_pid = fork();
+		
 		child_pid = getpid();
 		printf("Child Pid = %d\n", child_pid);
 	execve(str[0], str, NULL);
