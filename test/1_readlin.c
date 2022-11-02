@@ -21,7 +21,7 @@ unsigned int count_args(char *str, char *delimeter)
 		token = strtok(NULL, " ");
 	}
 	free(buffer);
-	return (count);
+	return (count + 1);
 }
 
 void break_string(char *str, char *delimeter, char **ptr)
