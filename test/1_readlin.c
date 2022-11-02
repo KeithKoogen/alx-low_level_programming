@@ -10,6 +10,7 @@ char *break_string(char *str, char *delimeter)
 	
 	while (token != NULL)
 	{
+		words = malloc(sizeof(char) * strlen(token + 1));
 		strcpy(token, words);
 		token = strtok(NULL, " ");
 	}
