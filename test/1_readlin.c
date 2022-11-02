@@ -31,13 +31,17 @@ int main(void)
 	
 	
 	
-printf("before break string function");
-	str = break_string(buffer, " ");
+str = break_string(buffer, " ");
+	while (str != NULL)
+	{
+		str = break_string(buffer, " ");
+		printf("%s\n", str);
+	}
 	
 	
 
   
-  printf("%s\n", str);
+  
 
 
 	
