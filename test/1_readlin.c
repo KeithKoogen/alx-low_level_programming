@@ -32,6 +32,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	{
 		ptr[i] = malloc(sizeof(char) * strlen(token + 1));
 		strcpy(ptr[i], token);
+		printf("from function: %s\n", token);
 		token = strtok(NULL, " ");
 		++i;
 	}
