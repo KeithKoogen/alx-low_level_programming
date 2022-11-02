@@ -36,12 +36,11 @@ int main(void)
 	
 	
 str = break_string(buffer, " ");
-	while (str != NULL)
-	{
+	
 		printf("%s\n", str);
-		str = break_string(buffer, " ");
+
 		
-	}
+	
 	
 	
 
