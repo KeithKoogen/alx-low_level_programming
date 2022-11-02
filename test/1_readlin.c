@@ -80,14 +80,14 @@ break_string(buffer, " ", str);
 
 	
 	
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 2; i++)
 	{
-		if (fork() == 0)
-		{
+		fork();
+		
 		
 		execve(str[0], str, NULL);
 		
-		}
+		
 		wait(&status);
 		child_pid = getpid();
 		printf("child pid %d\n", child_pid);
