@@ -72,11 +72,7 @@ str = malloc(sizeof(char *) * count);
 		printf("%d\n", count);
 break_string(buffer, " ", str);
 	
-	while (str[i] != NULL)
-	{
-		printf("last while loop: %s\n", str[i]);
-		++i;
-	}
+	execve(str[0], str, NULL);
 
 
 		
