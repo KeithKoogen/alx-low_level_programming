@@ -4,17 +4,16 @@
 
 char *break_string(char *str, char *delimeter)
 {
-	char *token, *word;
+	char *token;
 	
 	token = strtok(str, delimeter);
 	
 	while (token != NULL)
 	{
-		word = token;
-		token = strtok(str, delimeter);
+		token = strtok(NULL, " ");
 	}
 	
-	return (word);
+	return (token);
 }
 
 
