@@ -16,7 +16,7 @@ int main(void)
   printf("$ ");  
   characters = getline(&buffer, &size, stdin);
   }
-  while (characters == 0);
+  while (characters == 1);
   
   printf("%s\n%zu\n", buffer, characters);
   
