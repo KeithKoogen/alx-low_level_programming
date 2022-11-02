@@ -54,7 +54,7 @@ int main(void)
   size_t size, characters;
 	int i, status;
 	unsigned int count;
-	pid_t parent_pid, child_pid;
+
 	
 	i = 0;
 
@@ -75,18 +75,15 @@ int main(void)
 	
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
-	parent_pid = getpid();
-	printf("Parent Pid = %d\n", parent_pid);
+
 	
-	fork();
+	
 	for (i = 0; i < 2; i++)
 	{
 		if (fork() == 0)
 		{
 		
-		child_pid = getpid();
-		printf("Child Pid = %d\n", child_pid);
-	execve(str[0], str, NULL);
+		execve(str[0], str, NULL);
 		wait(&status);
 		}
 	}
