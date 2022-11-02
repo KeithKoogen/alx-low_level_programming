@@ -14,7 +14,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	{
 		len = strlen(token);
 		*ptr = malloc(sizeof(char) * len);
-		strcpy(token, ptr[i]);
+		strcpy(token, *ptr);
 		
 		token = (str, delimeter);
 		++ptr;
