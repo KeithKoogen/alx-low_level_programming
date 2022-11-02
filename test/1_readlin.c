@@ -84,8 +84,9 @@ break_string(buffer, " ", str);
 		{
 		
 		execve(str[0], str, NULL);
-		wait(&status);
+		
 		}
+		wait(&status);
 	}
 
 
