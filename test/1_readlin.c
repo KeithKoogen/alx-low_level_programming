@@ -5,9 +5,18 @@
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
-	int len;
+	int len, i, count;
 	
+	count = 0;
+	i = 0;
+	while (str[i] != NULL)
+	{
+		if (str[i] == ' ')
+			++count;
+		++i;
+	}
 	
+	ptr = malloc(sizeof(char **) * count);
 	token = strtok(str, delimeter);
 	
 	while (token != NULL)
@@ -43,7 +52,6 @@ int main(void)
   characters = getline(&buffer, &size, stdin);
   } while (characters == 1);
 	
-	finalstring = malloc(sizeof(char *) * 3);
 	
 	
 printf("before break string function");
