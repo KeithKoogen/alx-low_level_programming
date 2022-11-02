@@ -4,7 +4,7 @@
 
 int main(void)
 {
-  char *argv[] = {"./add_numbers", NULL};
+  char *argv[] = {"./add_numbers", "23", "45", NULL};
   
   printf("welcome to main program");
   
