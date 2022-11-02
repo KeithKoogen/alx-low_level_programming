@@ -47,10 +47,10 @@ int main(void)
 	finalstring = malloc(sizeof(char *) * size);
 	
 	
-
+printf("before break string function");
 	
 	break_string(buffer, " ", finalstring);
-	printf("after break string function");
+	
 	
 	while (finalstring[i] != NULL)
 	{
