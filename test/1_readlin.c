@@ -45,7 +45,7 @@ int main(void)
 	
 	finalstring = malloc(sizeof(char) * size);
 	
-	breakstring(buffer, " ", finalstring);
+	break_string(buffer, " ", finalstring);
 	
 	while (finalstring[i] != NULL)
 	{
