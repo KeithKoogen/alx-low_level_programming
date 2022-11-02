@@ -25,6 +25,9 @@ int main(void)
 {
   char *buffer, **str;
   size_t size, characters;
+	int i;
+	
+	i = 0;
 
 
   
@@ -43,7 +46,11 @@ int main(void)
 str = malloc(sizeof(char *) * 3);	
 break_string(buffer, " ", str);
 	
-		printf("%s\n", str);
+	while (str[i] != NULL)
+	{
+		printf("%s\n", str[i]);
+		++i;
+	}
 
 		
 	
