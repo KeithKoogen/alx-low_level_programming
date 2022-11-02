@@ -7,7 +7,7 @@ int main(int ac, char **av)
   i = 0;
   
   while (av[i] != NULL)
-    printf(av[i]);
+    printf("%s\n", av[i]);
   
   return (0);
   
