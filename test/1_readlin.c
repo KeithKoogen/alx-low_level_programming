@@ -5,6 +5,8 @@
 int count_args(char *str, char *delimeter)
 {
 	int count;
+	char *token;
+	
 	count = 0;
 	
 	token = strtok(str, delimeter);
