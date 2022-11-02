@@ -58,7 +58,7 @@ int main(void)
   characters = getline(&buffer, &size, stdin);
   } while (characters == 1);
 
-	count = count_args(buffer, " ", str);
+	count = count_args(buffer, " ");
 	
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
