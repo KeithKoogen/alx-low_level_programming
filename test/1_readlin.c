@@ -5,7 +5,7 @@
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
-	int i;
+	int i, len;
 	
 	i = 0;
 	
@@ -13,6 +13,8 @@ void break_string(char *str, char *delimeter, char **ptr)
 	
 	while (token != NULL)
 	{
+		len = strlen(token);
+		ptr[i] = malloc(sizeof(char) * len);
 		strcpy(token, ptr[i]);
 		
 		token = (str, delimeter);
