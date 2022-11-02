@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int count_args(char *str, char *delimeter)
+unsigned int count_args(char *str, char *delimeter)
 {
 	int count;
 	char *token;
@@ -43,7 +43,8 @@ int main(void)
 {
   char *buffer, **str;
   size_t size, characters;
-	int i, count;
+	int i;
+	unsigned int count;
 	
 	i = 0;
 
