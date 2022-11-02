@@ -34,8 +34,9 @@ int main(void)
 str = break_string(buffer, " ");
 	while (str != NULL)
 	{
-		str = break_string(buffer, " ");
 		printf("%s\n", str);
+		str = break_string(buffer, " ");
+		
 	}
 	
 	
