@@ -55,7 +55,10 @@ int main(void)
 	
 	
 printf("before break string function");
+	break_string(buffer, " ", finalstring);
 	
+	
+
 	
   
   return (0);
