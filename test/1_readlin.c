@@ -2,26 +2,28 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *break_string(char *str, char *delimeter)
+void break_string(char *str, char *delimeter, char **ptr)
 {
-	char *token, *words;
+	char *token;
+	int i;
+	
+	i = 0;
 	
 	token = strtok(str, delimeter);
 	
 	while (token != NULL)
 	{
-		words = malloc(sizeof(char) * strlen(token + 1));
-		strcpy(token, words);
+		ptr[i] = malloc(sizeof(char) * strlen(token + 1));
+		strcpy(token, ptr[i]);
 		token = strtok(NULL, " ");
 	}
 	
-	return (words);
 }
 
 
 int main(void)
 {
-  char *buffer, *str;
+  char *buffer, **str;
   size_t size, characters;
 
 
@@ -38,8 +40,8 @@ int main(void)
   } while (characters == 1);
 	
 	
-	
-str = break_string(buffer, " ");
+str = malloc(sizeof(char *) * 3);	
+break_string(buffer, " ", str);
 	
 		printf("%s\n", str);
 
