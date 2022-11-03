@@ -81,8 +81,9 @@ break_string(buffer, " ", str);
 	strcpy(path, oldpath);
 	strcat(path, str[0]);
 			printf("%s\n", path);
+		str[0] = malloc(sizeof(path));
+strcpy(str[0], path);
 
-	str[0] = path;
 
 		child_pid = fork();
 		
