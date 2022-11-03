@@ -60,6 +60,7 @@ int main(int ac, char **av, char **env)
 	i = 0;
   size = 32;
 	path = "/bin/";
+	printf("%s\n", path);
   
   buffer = malloc(sizeof(char) * size);
 	
