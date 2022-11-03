@@ -57,11 +57,7 @@ int main(void)
 	unsigned int count;
 	pid_t child_pid;
 
-	
 	i = 0;
-
-
-  
   size = 32;
   
   buffer = malloc(sizeof(char) * size);
@@ -80,32 +76,26 @@ break_string(buffer, " ", str);
 
 	
 	
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 5; i++)
 	{
 		child_pid = fork();
+		
+		if (child_pid == 0)
+		{
 		execve(str[0], str, NULL);
+		}
+		
+		if (child_pid != 0)
+			wait();
 		
 		child_pid = getpid();
 		printf("child pid %d\n", child_pid);
-		
-		
-		
-		
-		
+	
 		
 	}
 
 
 		
-	
-	
-	
-
-  
-  
-
-
-	
   
   return (0);
   
