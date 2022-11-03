@@ -49,7 +49,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 }
 
 
-int main(void)
+int main(int ac, char **av, char **env)
 {
   char *buffer, **str;
   size_t size, characters;
@@ -82,7 +82,7 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		execve(str[0], str, environ);
+		execve(str[0], str, env);
 		}
 		
 		if (child_pid != 0)
