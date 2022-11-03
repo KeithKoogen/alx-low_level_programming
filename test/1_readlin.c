@@ -79,14 +79,14 @@ break_string(buffer, " ", str);
 	strcat(path, str[0]);
 			printf("%s\n", path);
 
-	
+	str[0] = "";
 
 		child_pid = fork();
 		
 		if (child_pid == 0)
 		{
 		
-		execve(path, str[1], env);
+		execve(path, str, env);
 		}
 		
 		if (child_pid != 0)
