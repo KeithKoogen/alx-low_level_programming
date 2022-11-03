@@ -79,7 +79,7 @@ break_string(buffer, " ", str);
 	strcat(path, str[0]);
 			printf("%s\n", path);
 
-	str[0] = "";
+	str[0] = path;
 
 		child_pid = fork();
 		
