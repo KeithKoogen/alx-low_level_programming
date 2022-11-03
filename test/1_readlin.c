@@ -59,8 +59,8 @@ int main(int ac, char **av, char **env)
 
 	i = 0;
   size = 32;
-	
-	path = "/bin/";
+	path = malloc(sizeof(char) * 100);
+	strcpy(path, "/bin/");
 	printf("%s\n", path);
 	strcat(path, "test");
 	printf("%s\n", path);
