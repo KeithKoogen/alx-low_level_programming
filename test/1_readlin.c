@@ -51,7 +51,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 
 int main(int ac, char **av, char **env)
 {
-  char *buffer, **str;
+  char *buffer, **str, *path;
   size_t size, characters;
 	int i, status;
 	unsigned int count;
@@ -59,6 +59,7 @@ int main(int ac, char **av, char **env)
 
 	i = 0;
   size = 32;
+	path = "/bin/";
   
   buffer = malloc(sizeof(char) * size);
 	
@@ -80,7 +81,8 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		execve("/bin/", str, env);
+		strcat(path, str[0]);	
+		execve(path, str, env);
 		}
 		
 		if (child_pid != 0)
