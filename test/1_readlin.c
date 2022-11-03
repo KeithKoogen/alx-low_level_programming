@@ -75,9 +75,7 @@ str = malloc(sizeof(char *) * count);
 break_string(buffer, " ", str);
 
 	
-	
-	for (i = 0; i < 5; i++)
-	{
+
 		child_pid = fork();
 		
 		if (child_pid == 0)
@@ -86,17 +84,14 @@ break_string(buffer, " ", str);
 		}
 		
 		if (child_pid != 0)
+		{
 			wait(&status);
+			printf("program has ended back to main program");
+		}
 		
-		child_pid = getpid();
-		printf("child pid %d\n", child_pid);
 	
 		
-	}
 
-
-		
-  
   return (0);
   
   
