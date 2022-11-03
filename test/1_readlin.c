@@ -82,7 +82,7 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		execve(str[0], str, NULL);
+		execve(str[0], str, environ);
 		}
 		
 		if (child_pid != 0)
