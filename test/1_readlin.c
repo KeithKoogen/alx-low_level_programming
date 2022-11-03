@@ -86,7 +86,7 @@ break_string(buffer, " ", str);
 		if (child_pid == 0)
 		{
 		
-		execve(path, str, env);
+		execve(path, str[1], env);
 		}
 		
 		if (child_pid != 0)
