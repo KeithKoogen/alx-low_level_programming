@@ -81,7 +81,8 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		strcat(path, str[0]);	
+		strcat(path, str[0]);
+			printf("%s\n", path);
 		execve(path, str, env);
 		}
 		
