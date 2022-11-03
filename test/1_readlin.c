@@ -86,7 +86,7 @@ break_string(buffer, " ", str);
 		}
 		
 		if (child_pid != 0)
-			wait(status);
+			wait(&status);
 		
 		child_pid = getpid();
 		printf("child pid %d\n", child_pid);
