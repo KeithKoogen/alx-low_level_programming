@@ -59,7 +59,7 @@ int main(int ac, char **av, char **env)
 
 	i = 0;
   size = 32;
-	path = malloc(sizeof(char) * 100);
+	path = calloc(100, (sizeof(char)));
 	strcpy(path, "/bin/");
 
   
