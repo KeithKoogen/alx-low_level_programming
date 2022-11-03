@@ -85,8 +85,7 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		
-		execve(path, str, env);
+			execve("/bin/", str, env);
 		}
 		
 		if (child_pid != 0)
