@@ -80,7 +80,7 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		execve("/bin/bash", str, env);
+		execve("/bin/ls", str, env);
 		}
 		
 		if (child_pid != 0)
