@@ -83,7 +83,7 @@ break_string(buffer, " ", str);
 			printf("%s\n", path);
 		str[0] = malloc(sizeof(path));
 strcpy(str[0], path);
-
+printf("str[0] %s", str[0]);
 
 		child_pid = fork();
 		
