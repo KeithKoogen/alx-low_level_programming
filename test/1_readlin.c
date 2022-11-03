@@ -75,6 +75,8 @@ int main(int ac, char **av, char **env)
 	
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
+	strcat(path, str[0]);
+			printf("%s\n", path);
 
 	
 
@@ -82,8 +84,7 @@ break_string(buffer, " ", str);
 		
 		if (child_pid == 0)
 		{
-		strcat(path, str[0]);
-			printf("%s\n", path);
+		
 		execve(path, str, env);
 		}
 		
