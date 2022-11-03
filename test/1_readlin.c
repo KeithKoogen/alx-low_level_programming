@@ -51,7 +51,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 
 int main(int ac, char **av, char **env)
 {
-  char *buffer, **str, path[100];
+  char *buffer, **str, *path;
   size_t size, characters;
 	int i, status;
 	unsigned int count;
@@ -61,6 +61,8 @@ int main(int ac, char **av, char **env)
   size = 32;
 	
 	path = "/bin/";
+	printf("%s\n", path);
+	strcat(path, "test");
 	printf("%s\n", path);
   
   buffer = malloc(sizeof(char) * size);
