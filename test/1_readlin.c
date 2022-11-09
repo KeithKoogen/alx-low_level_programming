@@ -31,13 +31,18 @@ unsigned int count_args(char *str, char *delimeter)
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token, *str2;
-	int i;
+	int i, j;
 	
 	i = 0;
+	j = 0;
 	
 	str2 = malloc(sizeof(char) * (strlen(str) - 1));
 		      
-		      strcpy(str2, str);
+		     while (str[j] != '\n')
+		     {
+			     str2[j] = str[j];
+			     ++j;
+		     }
 
 printf("str len break string function %ld\n", strlen(str2));
 	
