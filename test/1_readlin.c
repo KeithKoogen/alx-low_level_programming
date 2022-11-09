@@ -38,12 +38,13 @@ void break_string(char *str, char *delimeter, char **ptr)
 	i = 0;
 	
 	token = strtok(str, delimeter);
+	printf("length of token %ld", strlen(token));
 	
 	while (token != NULL)
 	{
 		ptr[i] = malloc(sizeof(char) * strlen(token));
 		strcpy(ptr[i], token);
-		token = strtok(NULL, " ");
+		token = strtok(NULL, delimeter);
 		++i;
 	}
 	
