@@ -33,12 +33,24 @@ unsigned int count_args(char *str, char *delimeter)
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
-	int i;
+	int i, j, check;
 	
 	i = 0;
+	j = 0;
+	check = 0;
 	
+	while (str[j] != '\0')
+	{
+		if (str[j] == ' ')
+			check = 1;
+		
+		++j;
+	}
+	
+	if (check == 1)
+	{
 	token = strtok(str, delimeter);
-	printf("length of token %ld", strlen(token));
+
 	
 	while (token != NULL)
 	{
@@ -46,6 +58,11 @@ void break_string(char *str, char *delimeter, char **ptr)
 		strcpy(ptr[i], token);
 		token = strtok(NULL, delimeter);
 		++i;
+	}
+	} else
+	{
+		ptr[0] = malloc(sizeof(char) * strlen(str));
+		strcpy(ptr[i], str);
 	}
 	
 }
