@@ -56,6 +56,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 		++i;
 	}
 	
+	free(str2);
 	
 }
 
@@ -172,7 +173,8 @@ strcpy(str[0], path);
 	
 	
 	
-		
+	free(buffer);
+			free(str);	
 
   return (0);
   
