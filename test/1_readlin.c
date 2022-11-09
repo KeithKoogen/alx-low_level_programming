@@ -119,6 +119,11 @@ int main(int ac, char **av, char **env)
 	
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
+	if (strcmp(str[0], "exit") == 0)
+	{
+		exit(0);
+		return (0);
+	}
 	
 	exists = searchforfunction(str[0], "/bin/");
 	
@@ -138,8 +143,7 @@ break_string(buffer, " ", str);
 		str[0] = malloc(sizeof(path));
 strcpy(str[0], path);
 	
-	if (strcmp(str[0], "exit") == 0)
-		exit(0);
+	
 
 		child_pid = fork();
 		
