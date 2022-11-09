@@ -66,6 +66,7 @@ int searchforfunction(char *str, char *directory)
 
     while ((de = readdir(dr)) != NULL)
     {
+	    printf("%s\n", de->d_name);
 	    if (strcmp(de->d_name, str) == 0)
 	    {
 		    closedir(dr);  
