@@ -38,6 +38,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	i = 0;
 	j = 0;
 	check = 0;
+	printf("str len before %ld\n", strlen(str));
 	
 	while (str[j] != '\0')
 	{
