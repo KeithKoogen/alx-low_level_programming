@@ -66,7 +66,6 @@ int searchforfunction(char *str, char *directory)
 
     while ((de = readdir(dr)) != NULL)
     {
-	    printf("%s\n", de->d_name);
 	    if (strcmp(de->d_name, str) == 0)
 	    {
 		    closedir(dr);  
@@ -85,7 +84,7 @@ int main(int ac, char **av, char **env)
 {
   char *buffer, **str, *path, *oldpath;
   size_t size, characters;
-	int i, status;
+	int i, status, exists;
 	unsigned int count;
 	pid_t child_pid;
 	
@@ -111,7 +110,9 @@ int main(int ac, char **av, char **env)
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
 	
-	if (searchforfunction(str[0], "/bin/") == 1)
+	exists = searchforfunction(str[0], "/bin/");
+	
+	if (exists == 1)
 	{
 		printf("function exists");
 	}
