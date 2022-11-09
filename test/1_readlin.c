@@ -137,6 +137,9 @@ break_string(buffer, " ", str);
 	
 		str[0] = malloc(sizeof(path));
 strcpy(str[0], path);
+	
+	if (strcmp(str[0], "exit") == 0)
+		exit(0);
 
 		child_pid = fork();
 		
