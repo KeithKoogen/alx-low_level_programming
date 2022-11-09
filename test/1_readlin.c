@@ -160,6 +160,7 @@ strcpy(str[0], path);
 		{
 			wait(&status);
 			printf("\n");
+			fflush(stdin);
 			main(ac, av, env);
 
 		}
