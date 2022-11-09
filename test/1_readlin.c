@@ -50,7 +50,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 }
 
 
-int searchforfunction(*str, *directory)
+int searchforfunction(char *str, char *directory)
 {
 		struct dirent *de;
   
