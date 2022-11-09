@@ -155,6 +155,7 @@ strcpy(str[0], path);
 		if (child_pid != 0)
 		{
 			wait(&status);
+			printf("\n");
 			main(ac, av, env);
 
 		}
