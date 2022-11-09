@@ -130,12 +130,7 @@ break_string(buffer, " ", str);
 	if (exists == 1)
 	{
 		printf("function exists");
-	}
-	else
-	{
-		printf("function not found");
-	}
-	path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
+		path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
 	
 	strcpy(path, oldpath);
 	strcat(path, str[0]);
@@ -159,6 +154,14 @@ strcpy(str[0], path);
 			main(ac, av, env);
 
 		}
+	}
+	else
+	{
+		printf("command not found\n");
+		main(ac, av, env);
+
+	}
+	
 		
 	
 		
