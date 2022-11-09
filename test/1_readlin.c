@@ -35,7 +35,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	
 	i = 0;
 	
-	str2 = malloc(sizeof(char) * (strlen(str) - 1);
+	str2 = malloc(sizeof(char) * (strlen(str) - 1));
 		      
 		      strcpy(str2, str);
 
