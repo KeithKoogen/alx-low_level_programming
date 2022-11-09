@@ -50,6 +50,36 @@ void break_string(char *str, char *delimeter, char **ptr)
 }
 
 
+int searchforfunction(*str, *directory)
+{
+		struct dirent *de;
+  
+   
+    DIR *dr = opendir(directory);
+  
+    if (dr == NULL)
+    {
+        printf("Could not open current directory" );
+        return 0;
+    }
+  
+
+    while ((de = readdir(dr)) != NULL)
+    {
+	    if (strcmp(de->d_name, str) == 0)
+	    {
+		    closedir(dr);  
+		    return (1);
+	    }
+    }
+  
+    closedir(dr);  
+	return (0);
+	
+	
+}
+
+
 int main(int ac, char **av, char **env)
 {
   char *buffer, **str, *path, *oldpath;
@@ -58,23 +88,6 @@ int main(int ac, char **av, char **env)
 	unsigned int count;
 	pid_t child_pid;
 	
-	struct dirent *de;  // Pointer for directory entry
-  
-    // opendir() returns a pointer of DIR type. 
-    DIR *dr = opendir("/bin/");
-  
-    if (dr == NULL)  // opendir returns NULL if couldn't open directory
-    {
-        printf("Could not open current directory" );
-        return 0;
-    }
-  
-    // Refer http://pubs.opengroup.org/onlinepubs/7990989775/xsh/readdir.html
-    // for readdir()
-    while ((de = readdir(dr)) != NULL)
-            printf("%s\n", de->d_name);
-  
-    closedir(dr);  
 
 	i = 0;
   size = 32;
@@ -96,7 +109,17 @@ int main(int ac, char **av, char **env)
 	
 str = malloc(sizeof(char *) * count);	
 break_string(buffer, " ", str);
+	
+	if (searchforfunction(str[0], "/bin/") == 1)
+	{
+		printf("function exists");
+	}
+	else
+	{
+		printf("function not found");
+	}
 	path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
+	
 	strcpy(path, oldpath);
 	strcat(path, str[0]);
 			printf("%s\n", path);
