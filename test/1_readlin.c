@@ -157,7 +157,7 @@ strcpy(str[0], path);
 	}
 	else
 	{
-		printf("%s:command not found\n", str[0]);
+		printf("%s: command not found\n", str[0]);
 		main(ac, av, env);
 
 	}
