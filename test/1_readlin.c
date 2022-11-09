@@ -131,15 +131,7 @@ break_string(buffer, " ", str);
 	{
 		printf("function exists");
 		
-	}
-	else
-	{
-		printf("%s: command not found\n", str[0]);
-		main(ac, av, env);
-
-	}
-	
-	path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
+		path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
 	
 	strcpy(path, oldpath);
 	strcat(path, str[0]);
@@ -161,10 +153,24 @@ strcpy(str[0], path);
 			wait(&status);
 			printf("\n");
 			fflush(stdin);
+			free(buffer);
+			free(str);
 			main(ac, av, env);
 
 		}
 		
+		
+	}
+	else
+	{
+		printf("%s: command not found\n", str[0]);
+		free(buffer);
+			free(str);
+		main(ac, av, env);
+
+	}
+	
+	
 	
 		
 
