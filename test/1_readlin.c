@@ -61,6 +61,8 @@ void break_string(char *str, char *delimeter, char **ptr)
 	}
 	} else
 	{
+		printf("str len after else %ld", strlen(str));
+		
 		ptr[0] = malloc(sizeof(char) * strlen(str));
 		strcpy(ptr[i], str);
 	}
