@@ -63,7 +63,7 @@ int searchforfunction(char *str, char *directory)
         return 0;
     }
   
-
+printf("string len: %d\n", strlen(str));
     while ((de = readdir(dr)) != NULL)
     {
 	    if (strcmp(de->d_name, str) == 0)
