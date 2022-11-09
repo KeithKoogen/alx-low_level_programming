@@ -30,12 +30,16 @@ unsigned int count_args(char *str, char *delimeter)
 
 void break_string(char *str, char *delimeter, char **ptr)
 {
-	char *token;
+	char *token, *str2;
 	int i;
 	
 	i = 0;
+	
+	str2 = malloc(sizeof(char) * (strlen(str) - 1);
+		      
+		      strcpy(str2, str);
 
-printf("str len break string function %ld\n", strlen(str));
+printf("str len break string function %ld\n", strlen(str2));
 	
 	token = strtok(str, delimeter);
 
