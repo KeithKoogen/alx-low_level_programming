@@ -44,9 +44,8 @@ void break_string(char *str, char *delimeter, char **ptr)
 			     ++j;
 		     }
 
-printf("str len break string function %ld\n", strlen(str2));
 	
-	token = strtok(str, delimeter);
+	token = strtok(str2, delimeter);
 
 	
 	while (token != NULL)
