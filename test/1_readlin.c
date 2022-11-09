@@ -148,7 +148,7 @@ strcpy(str[0], path);
 		if (child_pid != 0)
 		{
 			wait(&status);
-			main();
+			main(ac, av, env);
 
 		}
 		
