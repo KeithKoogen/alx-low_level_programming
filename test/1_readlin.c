@@ -73,7 +73,6 @@ int searchforfunction(char *str, char *directory)
         return 0;
     }
   
-printf("string len: %ld\n", strlen(str));
     while ((de = readdir(dr)) != NULL)
     {
 	    if (strcmp(de->d_name, str) == 0)
@@ -115,7 +114,7 @@ int main(int ac, char **av, char **env)
   characters = getline(&buffer, &size, stdin);
   } while (characters == 1);
 	
-printf("buffer length %ld\n", strlen(buffer));
+
 	count = count_args(buffer, " ");
 	
 str = malloc(sizeof(char *) * count);	
@@ -135,10 +134,9 @@ break_string(buffer, " ", str);
 	
 	strcpy(path, oldpath);
 	strcat(path, str[0]);
-			printf("%s\n", path);
+	
 		str[0] = malloc(sizeof(path));
 strcpy(str[0], path);
-printf("str[0] %s", str[0]);
 
 		child_pid = fork();
 		
@@ -150,7 +148,8 @@ printf("str[0] %s", str[0]);
 		if (child_pid != 0)
 		{
 			wait(&status);
-			printf("program has ended back to main program");
+			main();
+
 		}
 		
 	
