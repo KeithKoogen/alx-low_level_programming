@@ -130,15 +130,14 @@ break_string(buffer, " ", str);
 	
 	if (exists == 1)
 	{
-		printf("function exists");
-		
+	
 		path = calloc(strlen(oldpath) + strlen(str[0]) + 1, (sizeof(char)));
 	
-	strcpy(path, oldpath);
-	strcat(path, str[0]);
+		strcpy(path, oldpath);
+		strcat(path, str[0]);
 	
 		str[0] = malloc(sizeof(path));
-strcpy(str[0], path);
+		strcpy(str[0], path);
 	
 	
 
@@ -174,7 +173,7 @@ strcpy(str[0], path);
 	
 	
 	free(buffer);
-			free(str);	
+	free(str);	
 
   return (0);
   
