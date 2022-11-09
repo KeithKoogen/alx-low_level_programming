@@ -12,8 +12,6 @@ unsigned int count_args(char *str, char *delimeter)
 	char *buffer;
 	char *token;
 	
-	printf("str len in count_args function %ld\n", strlen(str));
-	
 	buffer = malloc(sizeof(str));
 	strcpy(buffer, str);
 
@@ -33,23 +31,12 @@ unsigned int count_args(char *str, char *delimeter)
 void break_string(char *str, char *delimeter, char **ptr)
 {
 	char *token;
-	int i, j, check;
+	int i;
 	
 	i = 0;
-	j = 0;
-	check = 0;
-	printf("str len before %ld\n", strlen(str));
+
+printf("str len break string function %ld\n", strlen(str));
 	
-	while (str[j] != '\0')
-	{
-		if (str[j] == ' ')
-			check = 1;
-		
-		++j;
-	}
-	
-	if (check == 1)
-	{
 	token = strtok(str, delimeter);
 
 	
@@ -60,13 +47,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 		token = strtok(NULL, delimeter);
 		++i;
 	}
-	} else
-	{
-		printf("str len after else %ld", strlen(str));
-		
-		ptr[0] = malloc(sizeof(char) * strlen(str));
-		strcpy(ptr[i], str);
-	}
+	
 	
 }
 
@@ -125,7 +106,8 @@ int main(int ac, char **av, char **env)
   printf("$ ");  
   characters = getline(&buffer, &size, stdin);
   } while (characters == 1);
-
+	
+printf("buffer length %ld\n", strlen(buffer));
 	count = count_args(buffer, " ");
 	
 str = malloc(sizeof(char *) * count);	
