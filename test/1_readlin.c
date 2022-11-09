@@ -12,7 +12,7 @@ unsigned int count_args(char *str, char *delimeter)
 	char *buffer;
 	char *token;
 	
-	
+	printf("str len in count_args function %ld\n", strlen(str));
 	
 	buffer = malloc(sizeof(str));
 	strcpy(buffer, str);
