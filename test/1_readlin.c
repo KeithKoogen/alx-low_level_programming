@@ -41,7 +41,7 @@ void break_string(char *str, char *delimeter, char **ptr)
 	
 	while (token != NULL)
 	{
-		ptr[i] = malloc(sizeof(char) * strlen(token + 1));
+		ptr[i] = malloc(sizeof(char) * strlen(token));
 		strcpy(ptr[i], token);
 		token = strtok(NULL, " ");
 		++i;
