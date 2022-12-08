@@ -29,8 +29,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == i)
 	{
 		tmp = old_node;
-		
-		if (old_node->prev == NULL)
+		if (old_node->prev == NULL && old_node->next == NULL)
+		{
+			return (-1)
+		}		
+		else if (old_node->prev == NULL)
 		{
 			old_node->next->prev = NULL;
 			*head = old_node->next;
