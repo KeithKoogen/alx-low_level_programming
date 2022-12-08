@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
 * print_dlistint - prints all elements of a doubly linked list
@@ -10,13 +11,13 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 
 	while (h->next != NULL)
 	{
-		printf(h->n);
+		printf("%d", h->n);
 		++i;
 		h = h->next;
 
