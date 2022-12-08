@@ -1,4 +1,4 @@
-#include "lists"
+#include "lists.h"
 
 /**
 * sum_dlistint - adds all data in linked list
