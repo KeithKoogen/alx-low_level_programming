@@ -17,4 +17,17 @@ unsigned long int hash_djb2(const unsigned char *str)
 	return (hash);
 }
 
+/**
+* hash_djb2 - outputs a hash value from given string
+* @str: a string to be hashed
+* Return: A hash value
+*/
+
 unsigned long int hash_djb2(const unsigned char *str)
+{
+	unsigned long int hash;
+
+	hash = hash_djb2(str);
+
+	return (hash);
+}
